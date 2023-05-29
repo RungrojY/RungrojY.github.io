@@ -1,0 +1,352 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Runroj Yadbantung’s memos",
+    "section": "",
+    "text": "Create an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate Cypher for JSON\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nTypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/neo4j-in-nextjs/index.html",
+    "href": "posts/neo4j-in-nextjs/index.html",
+    "title": "Connect to Neo4j Database in Node.js",
+    "section": "",
+    "text": "const neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"สมอ\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/neo4j-in-nextjs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "href": "posts/neo4j-in-nextjs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "title": "Connect to Neo4j Database in Node.js",
+    "section": "2 Firstly, create simple API in pages/hello.ts",
+    "text": "2 Firstly, create simple API in pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n\n  res.json({\n    message: 'Hello World!',\n  });\n}"
+  },
+  {
+    "objectID": "posts/neo4j-in-nextjs/index.html#create-a-database-connection-pageshello.ts",
+    "href": "posts/neo4j-in-nextjs/index.html#create-a-database-connection-pageshello.ts",
+    "title": "Connect to Neo4j Database in Node.js",
+    "section": "3 Create a database connection pages/hello.ts",
+    "text": "3 Create a database connection pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from \"next\";\nimport neo4j, { Driver, Session, Result, Record } from \"neo4j-driver\";\nimport { log } from \"console\";\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\n// Define the type for properties\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\n// API route handler\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const session: Session = driver.session();\n\n  try {\n    // Perform your Neo4j queries and logic here\n    const result = await session.run(\"MATCH (n) RETURN n LIMIT 5\");\n    \n    // const nodes: Record&lt;string, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n    const nodes: Dict&lt;PropertyKey, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n\n    console.log(nodes);\n\n    const jsonData = JSON.stringify(nodes);\n\n    res.status(200).json({ data: jsonData });\n\n  } catch (error) {\n    console.error(\"Error executing Neo4j query:\", error);\n    res.status(500).json({ error: \"Internal Server Error\" });\n  } finally {\n    session.close();\n  }\n}"
+  },
+  {
+    "objectID": "posts/neo4j-in-nextjs/index.html#firstly-create-simple-api-in-node.js",
+    "href": "posts/neo4j-in-nextjs/index.html#firstly-create-simple-api-in-node.js",
+    "title": "Connect to Neo4j Database in Node.js",
+    "section": "",
+    "text": "const neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"สมอ\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html",
+    "href": "posts/typescript_basic_usage/index.html",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User = {name: \"John\", age: \"30\", sex: \"male\"}\n\n\n\nconst data = {name: \"John\", age:30}\ntype User = typeof data;\n\nconst data2:User = {name: \"John\", age:30}\nconst data3:typeof data = {name: \"John\", age:30}\n\n\n\ntype User = {\n  name: string;\n  age: number | string;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User = {name: \"John\", age: \"30\"}\n\n\n\ntype User = {\n  name: string | undefined;\n  age?: number | string;\n};\n\nconst data1:User = {name: \"John\"}\nconst data2:User = {name: undefined}\nconst data3:User = {age: 1} // Type error, missing `name`\n\n\n\ntype User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User[\"name\"] = \"John\"\n\n\n\ntype User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:Pick&lt;User, \"name\"&gt; = {name: \"John\"}\nconst data:Pick&lt;User, \"name\" | \"age\"&gt; = {name: \"John\", age: 30}\n\n\n\ntype User = {\n  name: string;\n  age: number;\n}\n\nconst data1: User = {age: 22, name: \"Jenny\"}\ndata1.age = 23\n\nconst data2: Readonly&lt;User&gt; = {age: 22, name: \"Jenny\"}\ndata2.age = 23 // type error\n\n\n\ntype Prop = PropertyKey // string | number | symbol\n\nconst data:Prop = \"John\"\nconst data1:Prop = 21\nconst data2:Prop = false // type error"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#define-type",
+    "href": "posts/typescript_basic_usage/index.html#define-type",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User = {name: \"John\", age: \"30\", sex: \"male\"}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#define-type-1",
+    "href": "posts/typescript_basic_usage/index.html#define-type-1",
+    "title": "TypeScript Journey",
+    "section": "2.2 Define type",
+    "text": "2.2 Define type\ntype Props&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\ntype Props2 = Props&lt;number, string&gt;\n// {\n//   [x: number]: string;\n// }\n\nconst data:Props2 = {\n  0: \"apple\",\n  1: \"orange\"\n}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#define-type-2",
+    "href": "posts/typescript_basic_usage/index.html#define-type-2",
+    "title": "TypeScript Journey",
+    "section": "2.1 Define type",
+    "text": "2.1 Define type\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};"
+  },
+  {
+    "objectID": "posts/cypher-import-export/index.html",
+    "href": "posts/cypher-import-export/index.html",
+    "title": "Create Cypher for JSON",
+    "section": "",
+    "text": "match (n) return n\nSELECT * from mytable where id = 1\nSELECT * from mytable where id = 2\n\n\nterminal\n\nsudo ufw status\nsudo ufw reload\n\n\n\nmatplotlib.py\n\nimport matplotlib.pyplot as plt\nplt.plot([1,23,2,4])\nplt.show()\n\n# highlight-style: arrow\nimport matplotlib.pyplot as plt\nprint(\"Hello\")\n```{python}\n1 + 1\n```\n\nlibrary(ggplot2)\ndat &lt;- data.frame(cond = rep(c(\"A\", \"B\"), each=10),\n                  xvar = 1:20 + rnorm(20,sd=3),\n                  yvar = 1:20 + rnorm(20,sd=3))\n\nggplot(dat, aes(x=xvar, y=yvar)) +\n  geom_point(shape=1) + \n  geom_smooth() \n\n\n\n\n\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "posts/cypher-import-export/index.html#firstly-create-simple-api-in-node.js",
+    "href": "posts/cypher-import-export/index.html#firstly-create-simple-api-in-node.js",
+    "title": "Create Cypher for JSON",
+    "section": "",
+    "text": "match (n) return n\nSELECT * from mytable where id = 1\nSELECT * from mytable where id = 2\n\n\nterminal\n\nsudo ufw status\nsudo ufw reload\n\n\n\nmatplotlib.py\n\nimport matplotlib.pyplot as plt\nplt.plot([1,23,2,4])\nplt.show()\n\n# highlight-style: arrow\nimport matplotlib.pyplot as plt\nprint(\"Hello\")\n```{python}\n1 + 1\n```\n\nlibrary(ggplot2)\ndat &lt;- data.frame(cond = rep(c(\"A\", \"B\"), each=10),\n                  xvar = 1:20 + rnorm(20,sd=3),\n                  yvar = 1:20 + rnorm(20,sd=3))\n\nggplot(dat, aes(x=xvar, y=yvar)) +\n  geom_point(shape=1) + \n  geom_smooth() \n\n\n\n\n\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#get-specific-type",
+    "href": "posts/typescript_basic_usage/index.html#get-specific-type",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User[\"name\"] = \"John\""
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#get-specific-type-1",
+    "href": "posts/typescript_basic_usage/index.html#get-specific-type-1",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:Pick&lt;User, \"name\"&gt; = {name: \"John\"}\nconst data:Pick&lt;User, \"name\" | \"age\"&gt; = {name: \"John\", age: 30}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#limit-keys-object-with-pick",
+    "href": "posts/typescript_basic_usage/index.html#limit-keys-object-with-pick",
+    "title": "TypeScript Journey",
+    "section": "2.2 Limit keys object with Pick",
+    "text": "2.2 Limit keys object with Pick\nconst person = {\n  name: \"John\",\n  age: 31,\n  sex: \"male\",\n};\n\ndeclare function pick&lt;T, K extends keyof T&gt; (obj: T, ...keys: K[]): Pick&lt;T, K&gt;;\n\nconst data = pick(person, \"name\", \"age\");\n// data can be only `data.name` or `data.age`"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#get-type-from-data",
+    "href": "posts/typescript_basic_usage/index.html#get-type-from-data",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "const data = {name: \"John\", age:30}\ntype User = typeof data;\n\nconst data2:User = {name: \"John\", age:30}\nconst data3:typeof data = {name: \"John\", age:30}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#add-more-choices",
+    "href": "posts/typescript_basic_usage/index.html#add-more-choices",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number | string;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User = {name: \"John\", age: \"30\"}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#optional-type",
+    "href": "posts/typescript_basic_usage/index.html#optional-type",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string | undefined;\n  age?: number | string;\n};\n\nconst data1:User = {name: \"John\"}\nconst data2:User = {name: undefined}\nconst data3:User = {age: 1} // Type error, missing `name`"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#read-only-type",
+    "href": "posts/typescript_basic_usage/index.html#read-only-type",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n}\n\nconst data1: User = {age: 22, name: \"Jenny\"}\ndata1.age = 23\n\nconst data2: Readonly&lt;User&gt; = {age: 22, name: \"Jenny\"}\ndata2.age = 23 // type error"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#limit-key-access-with-pick",
+    "href": "posts/typescript_basic_usage/index.html#limit-key-access-with-pick",
+    "title": "TypeScript Journey",
+    "section": "2.3 Limit key access with Pick",
+    "text": "2.3 Limit key access with Pick\nconst person = {\n  name: \"John\",\n  age: 31,\n  sex: \"male\",\n};\n\ndeclare function pick&lt;T, K extends keyof T&gt; (obj: T, ...keys: K[]): Pick&lt;T, K&gt;;\n\nconst data = pick(person, \"name\", \"age\");\n// data can be only `data.name` or `data.age`"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#type-on-function",
+    "href": "posts/typescript_basic_usage/index.html#type-on-function",
+    "title": "TypeScript Journey",
+    "section": "2.4 Type on function",
+    "text": "2.4 Type on function"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#add-more-choice-on-type",
+    "href": "posts/typescript_basic_usage/index.html#add-more-choice-on-type",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number | string;\n  sex: \"male\" | \"female\"\n};\n\nconst data:User = {name: \"John\", age: \"30\"}"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#exclude-some-types",
+    "href": "posts/typescript_basic_usage/index.html#exclude-some-types",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type User = {\n  name: string;\n  age: number;\n  sex: \"male\" | \"female\"\n};\n\nconst data:Pick&lt;User, \"name\"&gt; = {name: \"John\"}\nconst data:Pick&lt;User, \"name\" | \"age\"&gt; = {name: \"John\", age: 30}"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html",
+    "href": "posts/cypher-query/index.html",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) RETURN n\n\n\n\nMATCH (n) \nWHERE NOT (n)-[]-()\nRETURN n\n\n\n\nMATCH (n) RETURN COUNT(n) as count\n\n\n\nMATCH (n) DETACH DELETE n\n\n\n\nMATCH (n)\nREMOVE n.propertyName\n\n\n\nMATCH (n)\nWHERE ID(n) = 1\nRETURN n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#firstly-create-simple-api-in-node.js",
+    "href": "posts/cypher-query/index.html#firstly-create-simple-api-in-node.js",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "match (n) return n"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#property-key",
+    "href": "posts/typescript_basic_usage/index.html#property-key",
+    "title": "TypeScript Journey",
+    "section": "",
+    "text": "type Prop = PropertyKey // string | number | symbol\n\nconst data:Prop = \"John\"\nconst data1:Prop = 21\nconst data2:Prop = false // type error"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#type-like-a-funtion",
+    "href": "posts/typescript_basic_usage/index.html#type-like-a-funtion",
+    "title": "TypeScript Journey",
+    "section": "2.1 Type like a funtion",
+    "text": "2.1 Type like a funtion\ntype User = {\n  name: string;\n  age: number;\n  vegetarian: boolean;\n} \n\ntype Prop&lt;T, K extends keyof T&gt; = T[K]\n\ntype AA = Prop&lt;User, \"name\"&gt;\n//string\n\ntype BB = Prop&lt;User, \"name\" | \"age\"&gt;\n//string | number\n\ntype CC = Prop&lt;User, keyof User&gt;\n//string | number | boolean"
+  },
+  {
+    "objectID": "posts/typescript_basic_usage/index.html#promise-and-awaited-type",
+    "href": "posts/typescript_basic_usage/index.html#promise-and-awaited-type",
+    "title": "TypeScript Journey",
+    "section": "2.5 Promise and Awaited type",
+    "text": "2.5 Promise and Awaited type\ntype NonPromiseType = number;\ntype PromiseType = Promise&lt;NonPromiseType&gt;;\ntype PPP = Awaited&lt;PromiseType&gt;"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#get-started",
+    "href": "posts/cypher-query/index.html#get-started",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) RETURN n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#get-started-1",
+    "href": "posts/cypher-query/index.html#get-started-1",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "match (n) return n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#match-node-without-relationship",
+    "href": "posts/cypher-query/index.html#match-node-without-relationship",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) \nWHERE NOT (n)-[]-()\nRETURN n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#delete-all-nodes-and-edges",
+    "href": "posts/cypher-query/index.html#delete-all-nodes-and-edges",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) DETACH DELETE n"
+  },
+  {
+    "objectID": "posts/neo4j-in-nodejs/index.html",
+    "href": "posts/neo4j-in-nodejs/index.html",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "",
+    "text": "Terminal&gt;node\n\nconst neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"Ginger\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/neo4j-in-nodejs/index.html#firstly-create-simple-api-in-node.js",
+    "href": "posts/neo4j-in-nodejs/index.html#firstly-create-simple-api-in-node.js",
+    "title": "Connect to Neo4j Database in Node.js",
+    "section": "",
+    "text": "const neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"สมอ\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/neo4j-in-nodejs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "href": "posts/neo4j-in-nodejs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "2 Firstly, create simple API in pages/hello.ts",
+    "text": "2 Firstly, create simple API in pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n\n  res.json({\n    message: 'Hello World!',\n  });\n}"
+  },
+  {
+    "objectID": "posts/neo4j-in-nodejs/index.html#create-a-database-connection-pageshello.ts",
+    "href": "posts/neo4j-in-nodejs/index.html#create-a-database-connection-pageshello.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "3 Create a database connection pages/hello.ts",
+    "text": "3 Create a database connection pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from \"next\";\nimport neo4j, { Driver, Session, Result, Record } from \"neo4j-driver\";\nimport { log } from \"console\";\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\n// Define the type for properties\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\n// API route handler\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const session: Session = driver.session();\n\n  try {\n    // Perform your Neo4j queries and logic here\n    const result = await session.run(\"MATCH (n) RETURN n LIMIT 5\");\n    \n    // const nodes: Record&lt;string, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n    const nodes: Dict&lt;PropertyKey, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n\n    console.log(nodes);\n\n    const jsonData = JSON.stringify(nodes);\n\n    res.status(200).json({ data: jsonData });\n\n  } catch (error) {\n    console.error(\"Error executing Neo4j query:\", error);\n    res.status(500).json({ error: \"Internal Server Error\" });\n  } finally {\n    session.close();\n  }\n}"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#count-all-node",
+    "href": "posts/cypher-query/index.html#count-all-node",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "match (n) return count(n) as count"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#remove-a-property-from-all-nodes",
+    "href": "posts/cypher-query/index.html#remove-a-property-from-all-nodes",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n)\nREMOVE n.propertyName"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#remove-a-property-from-all-nodes-1",
+    "href": "posts/cypher-query/index.html#remove-a-property-from-all-nodes-1",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n)\nWHERE ID(n) = 1\nRETURN n"
+  },
+  {
+    "objectID": "posts/neo4j-in-nodejs/index.html#test-a-connection-in-nodejs",
+    "href": "posts/neo4j-in-nodejs/index.html#test-a-connection-in-nodejs",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "",
+    "text": "Terminal&gt;node\n\nconst neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"Ginger\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#match-all-nodes",
+    "href": "posts/cypher-query/index.html#match-all-nodes",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) RETURN n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#match-nodes-without-relationship",
+    "href": "posts/cypher-query/index.html#match-nodes-without-relationship",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) \nWHERE NOT (n)-[]-()\nRETURN n"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#count-all-nodes",
+    "href": "posts/cypher-query/index.html#count-all-nodes",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n) RETURN COUNT(n) as count"
+  },
+  {
+    "objectID": "posts/cypher-query/index.html#match-node-with-an-id",
+    "href": "posts/cypher-query/index.html#match-node-with-an-id",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "MATCH (n)\nWHERE ID(n) = 1\nRETURN n"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html",
+    "href": "posts/neo4j-nextjs/index.html",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "",
+    "text": "Terminal&gt;node\n\nconst neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"Ginger\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html#test-a-connection-in-nodejs",
+    "href": "posts/neo4j-nextjs/index.html#test-a-connection-in-nodejs",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "",
+    "text": "Terminal&gt;node\n\nconst neo4j = require('neo4j-driver');\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\nlet query = `\n  MATCH (s:Herb)-[v:HAS_COMPOUND]-(o)\n  WHERE toLower(s.name) CONTAINS toLower(\"Ginger\")\n  return s,v,o\n  limit 5\n  `;\n\nconst session = driver.session();\n\nlet result = await session.run(query);\n\n\nresult.records[0].get('s').properties\nresult.records[0].get('s').elementId\nresult.records[0].get('s').labels\n\nresult.records[0].get('v').properties\nresult.records[0].get('v').type\nresult.records[0].get('v').startNodeElementId\nresult.records[0].get('v').endNodeElementId\n\nresult.records[0].get('o').properties\nresult.records[0].get('o').labels\nresult.records[0].get('o').elementId"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "href": "posts/neo4j-nextjs/index.html#firstly-create-simple-api-in-pageshello.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "2 Firstly, create simple API in pages/hello.ts",
+    "text": "2 Firstly, create simple API in pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n\n  res.json({\n    message: 'Hello World!',\n  });\n}"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html#create-a-database-connection-pageshello.ts",
+    "href": "posts/neo4j-nextjs/index.html#create-a-database-connection-pageshello.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "3 Create a database connection pages/hello.ts",
+    "text": "3 Create a database connection pages/hello.ts\nimport { NextApiRequest, NextApiResponse } from \"next\";\nimport neo4j, { Driver, Session, Result, Record } from \"neo4j-driver\";\nimport { log } from \"console\";\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\n// Define the type for properties\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\n// API route handler\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const session: Session = driver.session();\n\n  try {\n    // Perform your Neo4j queries and logic here\n    const result = await session.run(\"MATCH (n) RETURN n LIMIT 5\");\n    \n    // const nodes: Record&lt;string, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n    const nodes: Dict&lt;PropertyKey, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n\n    console.log(nodes);\n\n    const jsonData = JSON.stringify(nodes);\n\n    res.status(200).json({ data: jsonData });\n\n  } catch (error) {\n    console.error(\"Error executing Neo4j query:\", error);\n    res.status(500).json({ error: \"Internal Server Error\" });\n  } finally {\n    session.close();\n  }\n}"
+  }
+]

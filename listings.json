@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/neo4j-nextjs/index.html",
+      "/posts/cypher-import-export/index.html",
+      "/posts/cypher-query/index.html",
+      "/posts/typescript_basic_usage/index.html"
+    ]
+  }
+]
