@@ -2,8 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/setup-hadoop-cluster/index.html",
+      "/posts/nextjs-redux/index.html",
       "/posts/neo4j-nextjs/index.html",
-      "/posts/cypher-import-export/index.html",
+      "/posts/cypher-python/index.html",
       "/posts/cypher-query/index.html",
       "/posts/typescript_basic_usage/index.html"
     ]

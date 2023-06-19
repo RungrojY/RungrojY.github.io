@@ -9,7 +9,7 @@
 <meta name="author" content="Rungroj Yadbantung">
 <meta name="dcterms.date" content="2023-05-25">
 
-<title>RY - TypeScript Journey</title>
+<title>RY - My TypeScript Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/sun.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -119,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
@@ -142,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">TypeScript Journey</h1>
+      <h1 class="title">My TypeScript Journey</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">typescript</div>
               </div>
@@ -184,17 +185,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#add-more-choice-on-type" id="toc-add-more-choice-on-type" class="nav-link" data-scroll-target="#add-more-choice-on-type"><span class="header-section-number">1.3</span> Add more choice on type</a></li>
   <li><a href="#optional-type" id="toc-optional-type" class="nav-link" data-scroll-target="#optional-type"><span class="header-section-number">1.4</span> Optional type</a></li>
   <li><a href="#get-specific-type" id="toc-get-specific-type" class="nav-link" data-scroll-target="#get-specific-type"><span class="header-section-number">1.5</span> Get specific type</a></li>
-  <li><a href="#exclude-some-types" id="toc-exclude-some-types" class="nav-link" data-scroll-target="#exclude-some-types"><span class="header-section-number">1.6</span> Exclude some types</a></li>
-  <li><a href="#read-only-type" id="toc-read-only-type" class="nav-link" data-scroll-target="#read-only-type"><span class="header-section-number">1.7</span> Read-only type</a></li>
-  <li><a href="#property-key" id="toc-property-key" class="nav-link" data-scroll-target="#property-key"><span class="header-section-number">1.8</span> Property Key</a></li>
+  <li><a href="#exclude-with-omit" id="toc-exclude-with-omit" class="nav-link" data-scroll-target="#exclude-with-omit"><span class="header-section-number">1.6</span> Exclude with <code>Omit</code></a></li>
+  <li><a href="#exclude-with-pick" id="toc-exclude-with-pick" class="nav-link" data-scroll-target="#exclude-with-pick"><span class="header-section-number">1.7</span> Exclude with <code>Pick</code></a></li>
+  <li><a href="#read-only-type" id="toc-read-only-type" class="nav-link" data-scroll-target="#read-only-type"><span class="header-section-number">1.8</span> Read-only type</a></li>
+  <li><a href="#property-key" id="toc-property-key" class="nav-link" data-scroll-target="#property-key"><span class="header-section-number">1.9</span> Property Key</a></li>
   </ul></li>
   <li><a href="#generic-type" id="toc-generic-type" class="nav-link" data-scroll-target="#generic-type"><span class="header-section-number">2</span> Generic Type</a>
   <ul class="collapse">
   <li><a href="#type-like-a-funtion" id="toc-type-like-a-funtion" class="nav-link" data-scroll-target="#type-like-a-funtion"><span class="header-section-number">2.1</span> Type like a funtion</a></li>
   <li><a href="#define-type-1" id="toc-define-type-1" class="nav-link" data-scroll-target="#define-type-1"><span class="header-section-number">2.2</span> Define type</a></li>
   <li><a href="#limit-key-access-with-pick" id="toc-limit-key-access-with-pick" class="nav-link" data-scroll-target="#limit-key-access-with-pick"><span class="header-section-number">2.3</span> Limit key access with <code>Pick</code></a></li>
-  <li><a href="#type-on-function" id="toc-type-on-function" class="nav-link" data-scroll-target="#type-on-function"><span class="header-section-number">2.4</span> Type on function</a></li>
-  <li><a href="#promise-and-awaited-type" id="toc-promise-and-awaited-type" class="nav-link" data-scroll-target="#promise-and-awaited-type"><span class="header-section-number">2.5</span> Promise and Awaited type</a></li>
+  <li><a href="#promise-and-awaited-type" id="toc-promise-and-awaited-type" class="nav-link" data-scroll-target="#promise-and-awaited-type"><span class="header-section-number">2.4</span> Promise and Awaited type</a></li>
+  </ul></li>
+  <li><a href="#solving-error-issures" id="toc-solving-error-issures" class="nav-link" data-scroll-target="#solving-error-issures"><span class="header-section-number">3</span> Solving error issures</a>
+  <ul class="collapse">
+  <li><a href="#assert-type-on-unknow-type" id="toc-assert-type-on-unknow-type" class="nav-link" data-scroll-target="#assert-type-on-unknow-type"><span class="header-section-number">3.1</span> Assert type on unknow type</a></li>
+  <li><a href="#using-symbol-in-object" id="toc-using-symbol-in-object" class="nav-link" data-scroll-target="#using-symbol-in-object"><span class="header-section-number">3.2</span> Using Symbol in Object</a></li>
+  <li><a href="#using-symbol-in-object-by-defining" id="toc-using-symbol-in-object-by-defining" class="nav-link" data-scroll-target="#using-symbol-in-object-by-defining"><span class="header-section-number">3.3</span> Using Symbol in Object by defining</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -260,97 +267,163 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span>User[<span class="st">"name"</span>] <span class="op">=</span> <span class="st">"John"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="exclude-some-types" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="exclude-some-types"><span class="header-section-number">1.6</span> Exclude some types</h2>
+<section id="exclude-with-omit" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="exclude-with-omit"><span class="header-section-number">1.6</span> Exclude with <code>Omit</code></h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User <span class="op">=</span> {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dt">number</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  sex<span class="op">:</span> <span class="st">"male"</span> <span class="op">|</span> <span class="st">"female"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  sex<span class="op">:</span> <span class="st">"male"</span> <span class="op">|</span> <span class="st">"female"</span><span class="op">;</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span><span class="bu">Pick</span><span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span><span class="op">&gt;</span> <span class="op">=</span> {name<span class="op">:</span> <span class="st">"John"</span>}</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span><span class="bu">Pick</span><span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span> <span class="op">|</span> <span class="st">"age"</span><span class="op">&gt;</span> <span class="op">=</span> {name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span> age<span class="op">:</span> <span class="dv">30</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User2 <span class="op">=</span> <span class="bu">Omit</span><span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"sex"</span><span class="op">&gt;;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Usage example:</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> user<span class="op">:</span> User2 <span class="op">=</span> {</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="read-only-type" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="read-only-type"><span class="header-section-number">1.7</span> Read-only type</h2>
+<section id="exclude-with-pick" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="exclude-with-pick"><span class="header-section-number">1.7</span> Exclude with <code>Pick</code></h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User <span class="op">=</span> {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dt">number</span><span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data1<span class="op">:</span> User <span class="op">=</span> {age<span class="op">:</span> <span class="dv">22</span><span class="op">,</span> name<span class="op">:</span> <span class="st">"Jenny"</span>}</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data1<span class="op">.</span><span class="at">age</span> <span class="op">=</span> <span class="dv">23</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data2<span class="op">:</span> <span class="bu">Readonly</span><span class="op">&lt;</span>User<span class="op">&gt;</span> <span class="op">=</span> {age<span class="op">:</span> <span class="dv">22</span><span class="op">,</span> name<span class="op">:</span> <span class="st">"Jenny"</span>}</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>data2<span class="op">.</span><span class="at">age</span> <span class="op">=</span> <span class="dv">23</span> <span class="co">// type error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  sex<span class="op">:</span> <span class="st">"male"</span> <span class="op">|</span> <span class="st">"female"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span><span class="bu">Pick</span><span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span><span class="op">&gt;</span> <span class="op">=</span> {name<span class="op">:</span> <span class="st">"John"</span>}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span><span class="bu">Pick</span><span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span> <span class="op">|</span> <span class="st">"age"</span><span class="op">&gt;</span> <span class="op">=</span> {name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span> age<span class="op">:</span> <span class="dv">30</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="property-key" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="property-key"><span class="header-section-number">1.8</span> Property Key</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Prop <span class="op">=</span> PropertyKey <span class="co">// string | number | symbol</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span>Prop <span class="op">=</span> <span class="st">"John"</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data1<span class="op">:</span>Prop <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data2<span class="op">:</span>Prop <span class="op">=</span> <span class="kw">false</span> <span class="co">// type error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="read-only-type" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="read-only-type"><span class="header-section-number">1.8</span> Read-only type</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dt">number</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data1<span class="op">:</span> User <span class="op">=</span> {age<span class="op">:</span> <span class="dv">22</span><span class="op">,</span> name<span class="op">:</span> <span class="st">"Jenny"</span>}</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>data1<span class="op">.</span><span class="at">age</span> <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data2<span class="op">:</span> <span class="bu">Readonly</span><span class="op">&lt;</span>User<span class="op">&gt;</span> <span class="op">=</span> {age<span class="op">:</span> <span class="dv">22</span><span class="op">,</span> name<span class="op">:</span> <span class="st">"Jenny"</span>}</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>data2<span class="op">.</span><span class="at">age</span> <span class="op">=</span> <span class="dv">23</span> <span class="co">// type error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="property-key" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="property-key"><span class="header-section-number">1.9</span> Property Key</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Prop <span class="op">=</span> PropertyKey <span class="co">// string | number | symbol</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span>Prop <span class="op">=</span> <span class="st">"John"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data1<span class="op">:</span>Prop <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data2<span class="op">:</span>Prop <span class="op">=</span> <span class="kw">false</span> <span class="co">// type error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="generic-type" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Generic Type</h1>
 <section id="type-like-a-funtion" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="type-like-a-funtion"><span class="header-section-number">2.1</span> Type like a funtion</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User <span class="op">=</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dt">number</span><span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  vegetarian<span class="op">:</span> <span class="dt">boolean</span><span class="op">;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>} </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Prop<span class="op">&lt;</span>T<span class="op">,</span> K <span class="kw">extends</span> <span class="kw">keyof</span> T<span class="op">&gt;</span> <span class="op">=</span> T[K]</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> AA <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span><span class="op">&gt;</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">//string</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> BB <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span> <span class="op">|</span> <span class="st">"age"</span><span class="op">&gt;</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">//string | number</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> CC <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="kw">keyof</span> User<span class="op">&gt;</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">//string | number | boolean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> User <span class="op">=</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dt">number</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  vegetarian<span class="op">:</span> <span class="dt">boolean</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>} </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Prop<span class="op">&lt;</span>T<span class="op">,</span> K <span class="kw">extends</span> <span class="kw">keyof</span> T<span class="op">&gt;</span> <span class="op">=</span> T[K]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> AA <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span><span class="op">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">//string</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> BB <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="st">"name"</span> <span class="op">|</span> <span class="st">"age"</span><span class="op">&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">//string | number</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> CC <span class="op">=</span> Prop<span class="op">&lt;</span>User<span class="op">,</span> <span class="kw">keyof</span> User<span class="op">&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">//string | number | boolean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="define-type-1" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="define-type-1"><span class="header-section-number">2.2</span> Define type</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Props<span class="op">&lt;</span>T <span class="kw">extends</span> PropertyKey<span class="op">,</span> U<span class="op">&gt;</span> <span class="op">=</span> {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  [K <span class="kw">in</span> T]<span class="op">:</span> U<span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Props2 <span class="op">=</span> Props<span class="op">&lt;</span><span class="dt">number</span><span class="op">,</span> <span class="dt">string</span><span class="op">&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">// {</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">//   [x: number]: string;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">// }</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span>Props2 <span class="op">=</span> {</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span><span class="op">:</span> <span class="st">"apple"</span><span class="op">,</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="op">:</span> <span class="st">"orange"</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Props<span class="op">&lt;</span>T <span class="kw">extends</span> PropertyKey<span class="op">,</span> U<span class="op">&gt;</span> <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  [K <span class="kw">in</span> T]<span class="op">:</span> U<span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> Props2 <span class="op">=</span> Props<span class="op">&lt;</span><span class="dt">number</span><span class="op">,</span> <span class="dt">string</span><span class="op">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">// {</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">//   [x: number]: string;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">// }</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data<span class="op">:</span>Props2 <span class="op">=</span> {</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span><span class="op">:</span> <span class="st">"apple"</span><span class="op">,</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="op">:</span> <span class="st">"orange"</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="limit-key-access-with-pick" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="limit-key-access-with-pick"><span class="header-section-number">2.3</span> Limit key access with <code>Pick</code></h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> person <span class="op">=</span> {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dv">31</span><span class="op">,</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  sex<span class="op">:</span> <span class="st">"male"</span><span class="op">,</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> <span class="kw">function</span> pick<span class="op">&lt;</span>T<span class="op">,</span> K <span class="kw">extends</span> <span class="kw">keyof</span> T<span class="op">&gt;</span> (obj<span class="op">:</span> T<span class="op">,</span> <span class="op">...</span>keys<span class="op">:</span> K[])<span class="op">:</span> <span class="bu">Pick</span><span class="op">&lt;</span>T<span class="op">,</span> K<span class="op">&gt;;</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> <span class="fu">pick</span>(person<span class="op">,</span> <span class="st">"name"</span><span class="op">,</span> <span class="st">"age"</span>)<span class="op">;</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">// data can be only `data.name` or `data.age`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> person <span class="op">=</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  age<span class="op">:</span> <span class="dv">31</span><span class="op">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  sex<span class="op">:</span> <span class="st">"male"</span><span class="op">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> <span class="kw">function</span> pick<span class="op">&lt;</span>T<span class="op">,</span> K <span class="kw">extends</span> <span class="kw">keyof</span> T<span class="op">&gt;</span> (obj<span class="op">:</span> T<span class="op">,</span> <span class="op">...</span>keys<span class="op">:</span> K[])<span class="op">:</span> <span class="bu">Pick</span><span class="op">&lt;</span>T<span class="op">,</span> K<span class="op">&gt;;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> <span class="fu">pick</span>(person<span class="op">,</span> <span class="st">"name"</span><span class="op">,</span> <span class="st">"age"</span>)<span class="op">;</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">// data can be only `data.name` or `data.age`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ## Type on function -->
 </section>
-<section id="type-on-function" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="type-on-function"><span class="header-section-number">2.4</span> Type on function</h2>
+<section id="promise-and-awaited-type" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="promise-and-awaited-type"><span class="header-section-number">2.4</span> Promise and Awaited type</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> NonPromiseType <span class="op">=</span> <span class="dt">number</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> PromiseType <span class="op">=</span> <span class="bu">Promise</span><span class="op">&lt;</span>NonPromiseType<span class="op">&gt;;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> PPP <span class="op">=</span> Awaited<span class="op">&lt;</span>PromiseType<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="promise-and-awaited-type" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="promise-and-awaited-type"><span class="header-section-number">2.5</span> Promise and Awaited type</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> NonPromiseType <span class="op">=</span> <span class="dt">number</span><span class="op">;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> PromiseType <span class="op">=</span> <span class="bu">Promise</span><span class="op">&lt;</span>NonPromiseType<span class="op">&gt;;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> PPP <span class="op">=</span> Awaited<span class="op">&lt;</span>PromiseType<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="solving-error-issures" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Solving error issures</h1>
+<!-- ## Nest of try-catch block to resolve error
+
+```typescript
+try {
+    try {
+    
+  } catch (error) {
+    
+  }
+  }
+``` -->
+<section id="assert-type-on-unknow-type" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="assert-type-on-unknow-type"><span class="header-section-number">3.1</span> Assert type on unknow type</h2>
+<p>We use a type assertion <code>(error as Error).message</code> to assert that the <code>error</code> object has the type Error, which guarantees the presence of the <code>message</code> property. This allows TypeScript to recognize and accept the <code>error.message</code> access without any type error.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> result <span class="op">=</span> <span class="cf">await</span> dbManager<span class="op">.</span><span class="fu">runQuery</span>(query)<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">status</span>(<span class="dv">200</span>)<span class="op">.</span><span class="fu">json</span>(result<span class="op">.</span><span class="at">records</span>)<span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// res.status(500).json({ error: error.message }); //type error</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">status</span>(<span class="dv">500</span>)<span class="op">.</span><span class="fu">json</span>({ error<span class="op">:</span> (error <span class="im">as</span> <span class="bu">Error</span>)<span class="op">.</span><span class="at">message</span> })<span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-symbol-in-object" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="using-symbol-in-object"><span class="header-section-number">3.2</span> Using Symbol in Object</h2>
+<p>Change the type constraint in the <code>Dict</code> definition to only allow string keys:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">export type</span> Dict<span class="op">&lt;</span>T <span class="kw">extends</span> <span class="dt">string</span><span class="op">,</span> U<span class="op">&gt;</span> <span class="op">=</span> {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  [K <span class="kw">in</span> T]<span class="op">:</span> U<span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> user<span class="op">:</span> Dict<span class="op">&lt;</span><span class="st">"name"</span> <span class="op">|</span> <span class="st">"email"</span><span class="op">,</span> string<span class="op">&gt;</span> <span class="op">=</span> {</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  name<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  email<span class="op">:</span> <span class="st">"john@gmail.com"</span><span class="op">,</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-symbol-in-object-by-defining" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="using-symbol-in-object-by-defining"><span class="header-section-number">3.3</span> Using Symbol in Object by defining</h2>
+<p>Keep the <code>Dict</code> type definition as it is, but use symbols as keys in the <code>user</code> object:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">export type</span> Dict<span class="op">&lt;</span>T <span class="kw">extends</span> PropertyKey<span class="op">,</span> U<span class="op">&gt;</span> <span class="op">=</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  [K <span class="kw">in</span> T]<span class="op">:</span> U<span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> nameKey <span class="op">=</span> <span class="bu">Symbol</span>(<span class="st">"name"</span>)<span class="op">;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> emailKey <span class="op">=</span> <span class="bu">Symbol</span>(<span class="st">"email"</span>)<span class="op">;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> user<span class="op">:</span> Dict<span class="op">&lt;</span><span class="dt">symbol</span><span class="op">,</span> <span class="dt">string</span><span class="op">&gt;</span> <span class="op">=</span> {</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  [nameKey]<span class="op">:</span> <span class="st">"John"</span><span class="op">,</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  [emailKey]<span class="op">:</span> <span class="st">"john@gmail.com"</span><span class="op">,</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

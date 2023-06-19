@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rungroj Yadbantung">
-<meta name="dcterms.date" content="2023-05-25">
+<meta name="dcterms.date" content="2023-06-10">
 
-<title>RY - Cypher Query</title>
+<title>RY - Using Redux in Next.js</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -143,9 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Cypher Query</h1>
+      <h1 class="title">Using Redux in Next.js</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">cypher</div>
+                <div class="quarto-category">typescript</div>
               </div>
                   </div>
   </div>
@@ -163,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 25, 2023</p>
+        <p class="date">June 10, 2023</p>
       </div>
     </div>
     
@@ -174,29 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul class="collapse">
-  <li><a href="#basic-query" id="toc-basic-query" class="nav-link active" data-scroll-target="#basic-query"><span class="header-section-number">1</span> Basic query</a>
-  <ul class="collapse">
-  <li><a href="#display-database-schema" id="toc-display-database-schema" class="nav-link" data-scroll-target="#display-database-schema"><span class="header-section-number">1.1</span> Display Database Schema</a></li>
-  <li><a href="#match-all-nodes" id="toc-match-all-nodes" class="nav-link" data-scroll-target="#match-all-nodes"><span class="header-section-number">1.2</span> Match all nodes</a></li>
-  <li><a href="#match-nodes-without-relationship" id="toc-match-nodes-without-relationship" class="nav-link" data-scroll-target="#match-nodes-without-relationship"><span class="header-section-number">1.3</span> Match Nodes without relationship</a></li>
-  <li><a href="#match-triple-nodes" id="toc-match-triple-nodes" class="nav-link" data-scroll-target="#match-triple-nodes"><span class="header-section-number">1.4</span> Match triple nodes</a></li>
-  <li><a href="#match-nodes-with-multiple-labels" id="toc-match-nodes-with-multiple-labels" class="nav-link" data-scroll-target="#match-nodes-with-multiple-labels"><span class="header-section-number">1.5</span> Match nodes with multiple labels</a></li>
-  <li><a href="#match-node-with-an-id" id="toc-match-node-with-an-id" class="nav-link" data-scroll-target="#match-node-with-an-id"><span class="header-section-number">1.6</span> Match node with an ID</a></li>
-  <li><a href="#match-node-with-some-text" id="toc-match-node-with-some-text" class="nav-link" data-scroll-target="#match-node-with-some-text"><span class="header-section-number">1.7</span> Match node with some text</a></li>
-  <li><a href="#match-a-label-that-contains-space" id="toc-match-a-label-that-contains-space" class="nav-link" data-scroll-target="#match-a-label-that-contains-space"><span class="header-section-number">1.8</span> MATCH a label that contains space</a></li>
-  <li><a href="#count-all-nodes" id="toc-count-all-nodes" class="nav-link" data-scroll-target="#count-all-nodes"><span class="header-section-number">1.9</span> Count all nodes</a></li>
-  <li><a href="#delete-all-nodes-and-edges" id="toc-delete-all-nodes-and-edges" class="nav-link" data-scroll-target="#delete-all-nodes-and-edges"><span class="header-section-number">1.10</span> Delete all nodes and edges</a></li>
-  <li><a href="#remove-a-property-from-all-nodes" id="toc-remove-a-property-from-all-nodes" class="nav-link" data-scroll-target="#remove-a-property-from-all-nodes"><span class="header-section-number">1.11</span> Remove a property from all nodes</a></li>
-  <li><a href="#set-a-new-property-to-all-nodes" id="toc-set-a-new-property-to-all-nodes" class="nav-link" data-scroll-target="#set-a-new-property-to-all-nodes"><span class="header-section-number">1.12</span> Set a new property to all nodes</a></li>
-  <li><a href="#create-one-node" id="toc-create-one-node" class="nav-link" data-scroll-target="#create-one-node"><span class="header-section-number">1.13</span> Create one node</a></li>
-  <li><a href="#create-a-relationship-from-nodes" id="toc-create-a-relationship-from-nodes" class="nav-link" data-scroll-target="#create-a-relationship-from-nodes"><span class="header-section-number">1.14</span> Create a relationship from nodes</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
@@ -208,77 +152,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="basic-query" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Basic query</h1>
-<section id="display-database-schema" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="display-database-schema"><span class="header-section-number">1.1</span> Display Database Schema</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>CALL db.schema.visualization()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-all-nodes" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="match-all-nodes"><span class="header-section-number">1.2</span> Match all nodes</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>MATCH (n) RETURN n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-nodes-without-relationship" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="match-nodes-without-relationship"><span class="header-section-number">1.3</span> Match Nodes without relationship</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>MATCH (n) </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>WHERE NOT (n)-[]-()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>RETURN n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-triple-nodes" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="match-triple-nodes"><span class="header-section-number">1.4</span> Match triple nodes</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>MATCH (n)-[:HAS_INFO]-&gt;(m)-[:CITE]-&gt;(p) RETURN n, m, p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-nodes-with-multiple-labels" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="match-nodes-with-multiple-labels"><span class="header-section-number">1.5</span> Match nodes with multiple labels</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>MATCH (n:Herb:Drug) RETURN n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-node-with-an-id" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="match-node-with-an-id"><span class="header-section-number">1.6</span> Match node with an ID</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>MATCH (n)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>WHERE ID(n) = 1</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>RETURN n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-node-with-some-text" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="match-node-with-some-text"><span class="header-section-number">1.7</span> Match node with some text</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>MATCH (n:`Country`)-[r]-(m)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>WHERE n.text CONTAINS 'Thai'</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>RETURN n, r, m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="match-a-label-that-contains-space" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="match-a-label-that-contains-space"><span class="header-section-number">1.8</span> MATCH a label that contains space</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>MATCH (n:`Geographic Distribution`) RETURN n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="count-all-nodes" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="count-all-nodes"><span class="header-section-number">1.9</span> Count all nodes</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>MATCH (n) RETURN COUNT(n) as count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="delete-all-nodes-and-edges" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="delete-all-nodes-and-edges"><span class="header-section-number">1.10</span> Delete all nodes and edges</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>MATCH (n) DETACH DELETE n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="remove-a-property-from-all-nodes" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="remove-a-property-from-all-nodes"><span class="header-section-number">1.11</span> Remove a property from all nodes</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>MATCH (n)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>REMOVE n.propertyName</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="set-a-new-property-to-all-nodes" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="set-a-new-property-to-all-nodes"><span class="header-section-number">1.12</span> Set a new property to all nodes</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>MATCH (n:Person)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>SET n.dummy = 0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="create-one-node" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="create-one-node"><span class="header-section-number">1.13</span> Create one node</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>CREATE (:User {name: "Charlie", age: 35, gender: "male"});</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>CREATE (:User {name: "Dave", age: 28, gender: "male"});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="create-a-relationship-from-nodes" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="create-a-relationship-from-nodes"><span class="header-section-number">1.14</span> Create a relationship from nodes</h2>
-<div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>MATCH (charlie:User {name: "Charlie"}), (dave:User {name: "Dave"})</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>CREATE (charlie)&lt;-[:FRIENDS_WITH {date: "Jan 19"}]-(dave);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
