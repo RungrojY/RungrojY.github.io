@@ -179,7 +179,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
-  <li><a href="#firstly-create-simple-api-in-node.js" id="toc-firstly-create-simple-api-in-node.js" class="nav-link active" data-scroll-target="#firstly-create-simple-api-in-node.js"><span class="header-section-number">1</span> Firstly, create simple API in Node.js`</a></li>
+  <li><a href="#install-a-py2neo-package" id="toc-install-a-py2neo-package" class="nav-link active" data-scroll-target="#install-a-py2neo-package"><span class="header-section-number">1</span> Install a <code>py2neo</code> package</a></li>
+  <li><a href="#import-python-packages" id="toc-import-python-packages" class="nav-link" data-scroll-target="#import-python-packages"><span class="header-section-number">2</span> Import Python packages</a></li>
+  <li><a href="#define-remove-special-characters" id="toc-define-remove-special-characters" class="nav-link" data-scroll-target="#define-remove-special-characters"><span class="header-section-number">3</span> Define remove special characters</a></li>
+  <li><a href="#define-funtion-for-creating-tuple-list-of-data" id="toc-define-funtion-for-creating-tuple-list-of-data" class="nav-link" data-scroll-target="#define-funtion-for-creating-tuple-list-of-data"><span class="header-section-number">4</span> Define funtion for creating tuple list of data</a></li>
+  <li><a href="#create-connection-to-graph-database" id="toc-create-connection-to-graph-database" class="nav-link" data-scroll-target="#create-connection-to-graph-database"><span class="header-section-number">5</span> Create connection to graph database</a></li>
+  <li><a href="#find-node-numbers" id="toc-find-node-numbers" class="nav-link" data-scroll-target="#find-node-numbers"><span class="header-section-number">6</span> Find node numbers</a></li>
+  <li><a href="#read-an-excel-file-using-pandas" id="toc-read-an-excel-file-using-pandas" class="nav-link" data-scroll-target="#read-an-excel-file-using-pandas"><span class="header-section-number">7</span> Read an excel file using <code>pandas</code></a></li>
+  <li><a href="#read-an-excel-file-using-pandas-1" id="toc-read-an-excel-file-using-pandas-1" class="nav-link" data-scroll-target="#read-an-excel-file-using-pandas-1"><span class="header-section-number">8</span> Read an excel file using <code>pandas</code></a></li>
+  <li><a href="#read-an-excel-file-using-pandas-2" id="toc-read-an-excel-file-using-pandas-2" class="nav-link" data-scroll-target="#read-an-excel-file-using-pandas-2"><span class="header-section-number">9</span> Read an excel file using <code>pandas</code></a></li>
+  <li><a href="#check-data-in-the-database" id="toc-check-data-in-the-database" class="nav-link" data-scroll-target="#check-data-in-the-database"><span class="header-section-number">10</span> Check data in the database</a></li>
   </ul>
 </nav>
 </nav>
@@ -193,60 +202,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="firstly-create-simple-api-in-node.js" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="firstly-create-simple-api-in-node.js"><span class="header-section-number">1</span> Firstly, create simple API in Node.js`</h2>
-<pre class="language-cypher"><code>match (n) return n</code></pre>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>SELECT * from mytable where id = 1</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>SELECT * from mytable where id = 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw status</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>matplotlib.py</strong></pre>
-</div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">2</span>,<span class="dv">4</span>])</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># highlight-style: arrow</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="bu">print</span>(<span class="st">"Hello"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">cond =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>), <span class="at">each=</span><span class="dv">10</span>),</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">xvar =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="at">sd=</span><span class="dv">3</span>),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">yvar =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="at">sd=</span><span class="dv">3</span>))</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>xvar, <span class="at">y=</span>yvar)) <span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="install-a-py2neo-package" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="install-a-py2neo-package"><span class="header-section-number">1</span> Install a <code>py2neo</code> package</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install py2neo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="import-python-packages" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="import-python-packages"><span class="header-section-number">2</span> Import Python packages</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re <span class="co">#regular expression</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> py2neo.bulk <span class="im">import</span> merge_nodes</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> py2neo <span class="im">import</span> Node, Graph, Relationship, NodeMatcher</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="define-remove-special-characters" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="define-remove-special-characters"><span class="header-section-number">3</span> Define remove special characters</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_special_characters(text):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  regex <span class="op">=</span> re.<span class="bu">compile</span>(<span class="vs">r'[\n\r\t]'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  clean_text <span class="op">=</span> regex.sub(<span class="st">" "</span>, text)  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> clean_text.strip()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="define-funtion-for-creating-tuple-list-of-data" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="define-funtion-for-creating-tuple-list-of-data"><span class="header-section-number">4</span> Define funtion for creating tuple list of data</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_tuple_list(df):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># prepare tuple list</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  keys <span class="op">=</span> df.columns.tolist()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  df_selected_columns <span class="op">=</span> pd.DataFrame(df, columns<span class="op">=</span>keys)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  records <span class="op">=</span> df_selected_columns.to_records(index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  tuples <span class="op">=</span> <span class="bu">list</span>(records)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> tuples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-connection-to-graph-database" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="create-connection-to-graph-database"><span class="header-section-number">5</span> Create connection to graph database</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect database</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>uri <span class="op">=</span> <span class="st">'bolt://localhost:7687'</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>user <span class="op">=</span> <span class="st">'neo4j'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>pwd <span class="op">=</span> <span class="st">'my-password'</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>graph <span class="op">=</span> Graph(uri, auth<span class="op">=</span>(user, pwd))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>nodes_matcher <span class="op">=</span> NodeMatcher(graph) <span class="co"># use in add_edges()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="find-node-numbers" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="find-node-numbers"><span class="header-section-number">6</span> Find node numbers</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of nodes in graph: '</span>, graph.nodes.match(<span class="st">'Node'</span>).count())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="read-an-excel-file-using-pandas" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="read-an-excel-file-using-pandas"><span class="header-section-number">7</span> Read an excel file using <code>pandas</code></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>excel_file <span class="op">=</span> <span class="st">'data.xlsx'</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df0 <span class="op">=</span> pd.read_excel(excel_file, sheet_name<span class="op">=</span><span class="dv">0</span>, skiprows<span class="op">=</span><span class="dv">0</span>, header<span class="op">=</span><span class="dv">0</span>, nrows<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df0 <span class="op">=</span> df0.applymap(<span class="kw">lambda</span> x:remove_special_characters(x) <span class="cf">if</span> <span class="bu">type</span>(x) <span class="op">==</span> <span class="bu">str</span> <span class="cf">else</span> x).fillna(<span class="st">''</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(df0))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="read-an-excel-file-using-pandas-1" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="read-an-excel-file-using-pandas-1"><span class="header-section-number">8</span> Read an excel file using <code>pandas</code></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>herb_name <span class="op">=</span> <span class="st">"Ginger"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>[df_name, df_information] <span class="op">=</span> df0</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df_name.shape, df_information.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="read-an-excel-file-using-pandas-2" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="read-an-excel-file-using-pandas-2"><span class="header-section-number">9</span> Read an excel file using <code>pandas</code></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>node_herb <span class="op">=</span> Node(<span class="st">"Herb"</span>, name<span class="op">=</span>herb_name)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>tuples <span class="op">=</span> create_tuple_list(df_name)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="bu">tuple</span> <span class="kw">in</span> tuples:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, value <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">tuple</span>):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    node_nomen_cat <span class="op">=</span> Node(<span class="st">"Nomenclature_Category"</span>, name<span class="op">=</span><span class="bu">tuple</span>[ind_nomen<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    node_ref <span class="op">=</span> Node(<span class="st">"Citation"</span>, name<span class="op">=</span><span class="bu">tuple</span>[ind_ref], link<span class="op">=</span><span class="bu">tuple</span>[ind_ref<span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (index <span class="op">&gt;=</span> ind_nomen <span class="kw">and</span> index <span class="op">&lt;</span> ind_ref <span class="kw">and</span> value <span class="op">!=</span> <span class="st">''</span>):</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>      graph.merge(node_herb, <span class="st">"Herb"</span>, <span class="st">"name"</span>)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      graph.merge(node_nomen_cat, <span class="st">"Nomenclature_Category"</span>, <span class="st">"name"</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      graph.merge(node_ref, <span class="st">"Citation"</span>, <span class="st">"link"</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>      node_nomen <span class="op">=</span> Node(<span class="st">"Nomenclature"</span>, name<span class="op">=</span><span class="bu">tuple</span>[index])</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>      rel1 <span class="op">=</span> Relationship(node_herb, <span class="st">"IS_CALLED"</span>, node_nomen)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>      rel2 <span class="op">=</span> Relationship(node_nomen, <span class="st">"CATEGORIZED"</span>, node_nomen_cat)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      rel3 <span class="op">=</span> Relationship(node_nomen, <span class="st">"CITE"</span>, node_ref)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>      graph.create(rel1)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>      graph.create(rel2)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>      graph.create(rel3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="check-data-in-the-database" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="check-data-in-the-database"><span class="header-section-number">10</span> Check data in the database</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">match (n:Herb {name: </span><span class="sc">%s</span><span class="st">})-[:IS_CALLED]-(m)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">return m</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span> <span class="op">%</span> herb_name</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> graph.run(query)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

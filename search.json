@@ -669,13 +669,160 @@
     "href": "posts/cypher-python/index.html",
     "title": "Using Cypher in Python",
     "section": "",
-    "text": "match (n) return n\nSELECT * from mytable where id = 1\nSELECT * from mytable where id = 2\n\n\nterminal\n\nsudo ufw status\nsudo ufw reload\n\n\n\nmatplotlib.py\n\nimport matplotlib.pyplot as plt\nplt.plot([1,23,2,4])\nplt.show()\n\n# highlight-style: arrow\nimport matplotlib.pyplot as plt\nprint(\"Hello\")\n```{python}\n1 + 1\n```\n\nlibrary(ggplot2)\ndat &lt;- data.frame(cond = rep(c(\"A\", \"B\"), each=10),\n                  xvar = 1:20 + rnorm(20,sd=3),\n                  yvar = 1:20 + rnorm(20,sd=3))\n\nggplot(dat, aes(x=xvar, y=yvar)) +\n  geom_point(shape=1) + \n  geom_smooth() \n\n\n\n\n\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\nFigure 1: Temperature and ozone level."
+    "text": "pip install py2neo"
   },
   {
     "objectID": "posts/cypher-python/index.html#firstly-create-simple-api-in-node.js",
     "href": "posts/cypher-python/index.html#firstly-create-simple-api-in-node.js",
     "title": "Using Cypher in Python",
     "section": "",
-    "text": "match (n) return n\nSELECT * from mytable where id = 1\nSELECT * from mytable where id = 2\n\n\nterminal\n\nsudo ufw status\nsudo ufw reload\n\n\n\nmatplotlib.py\n\nimport matplotlib.pyplot as plt\nplt.plot([1,23,2,4])\nplt.show()\n\n# highlight-style: arrow\nimport matplotlib.pyplot as plt\nprint(\"Hello\")\n```{python}\n1 + 1\n```\n\nlibrary(ggplot2)\ndat &lt;- data.frame(cond = rep(c(\"A\", \"B\"), each=10),\n                  xvar = 1:20 + rnorm(20,sd=3),\n                  yvar = 1:20 + rnorm(20,sd=3))\n\nggplot(dat, aes(x=xvar, y=yvar)) +\n  geom_point(shape=1) + \n  geom_smooth() \n\n\n\n\n\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\nFigure 1: Temperature and ozone level."
+    "text": "match (n) return n\nSELECT * from mytable where id = 1\nSELECT * from mytable where id = 2\n\n\nterminal\n\nsudo ufw status\nsudo ufw reload\n\n\n\nmatplotlib.py\n\nimport matplotlib.pyplot as plt\nplt.plot([1,23,2,4])\nplt.show()\n\n`{.python code-line-numbers=\"true\"} # highlight-style: arrow import matplotlib.pyplot as plt print(\"Hello\")"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#install-a-py2neo-package",
+    "href": "posts/cypher-python/index.html#install-a-py2neo-package",
+    "title": "Using Cypher in Python",
+    "section": "",
+    "text": "pip install py2neo"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#import-python-packages",
+    "href": "posts/cypher-python/index.html#import-python-packages",
+    "title": "Using Cypher in Python",
+    "section": "2 Import Python packages",
+    "text": "2 Import Python packages\nimport re #regular expression\nimport numpy as np\nimport pandas as pd\n\nfrom py2neo.bulk import merge_nodes\nfrom py2neo import Node, Graph, Relationship, NodeMatcher"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#import-python-packages-1",
+    "href": "posts/cypher-python/index.html#import-python-packages-1",
+    "title": "Using Cypher in Python",
+    "section": "3 Import Python packages",
+    "text": "3 Import Python packages\nimport re #regular expression\nimport numpy as np\nimport pandas as pd\n\nfrom py2neo.bulk import merge_nodes\nfrom py2neo import Node, Graph, Relationship, NodeMatcher"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#define-remove-special-characters",
+    "href": "posts/cypher-python/index.html#define-remove-special-characters",
+    "title": "Using Cypher in Python",
+    "section": "3 Define remove special characters",
+    "text": "3 Define remove special characters\ndef remove_special_characters(text):\n  regex = re.compile(r'[\\n\\r\\t]')\n  clean_text = regex.sub(\" \", text)  \n  return clean_text.strip()"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#define-funtion-for-creating-tuple-list-of-data",
+    "href": "posts/cypher-python/index.html#define-funtion-for-creating-tuple-list-of-data",
+    "title": "Using Cypher in Python",
+    "section": "4 Define funtion for creating tuple list of data",
+    "text": "4 Define funtion for creating tuple list of data\ndef create_tuple_list(df):\n  # prepare tuple list\n  keys = df.columns.tolist()\n\n  df_selected_columns = pd.DataFrame(df, columns=keys)\n\n  records = df_selected_columns.to_records(index=False)\n  tuples = list(records)\n\n  return tuples"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#create-connection-to-graph-database",
+    "href": "posts/cypher-python/index.html#create-connection-to-graph-database",
+    "title": "Using Cypher in Python",
+    "section": "5 Create connection to graph database",
+    "text": "5 Create connection to graph database\n# Connect database\nuri = 'bolt://localhost:7687'\nuser = 'neo4j'\npwd = 'my-password'\ngraph = Graph(uri, auth=(user, pwd))\nnodes_matcher = NodeMatcher(graph) # use in add_edges()"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#find-node-numbers",
+    "href": "posts/cypher-python/index.html#find-node-numbers",
+    "title": "Using Cypher in Python",
+    "section": "6 Find node numbers",
+    "text": "6 Find node numbers\nprint('Number of nodes in graph: ', graph.nodes.match('Node').count())"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#read-an-excel-file-using-pandas",
+    "href": "posts/cypher-python/index.html#read-an-excel-file-using-pandas",
+    "title": "Using Cypher in Python",
+    "section": "7 Read an excel file using pandas",
+    "text": "7 Read an excel file using pandas\nexcel_file = 'data.xlsx'\ndf0 = pd.read_excel(excel_file, sheet_name=0, skiprows=0, header=0, nrows=None)\ndf0 = df0.applymap(lambda x:remove_special_characters(x) if type(x) == str else x).fillna('')\nprint(len(df0))"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#read-an-excel-file-using-pandas-1",
+    "href": "posts/cypher-python/index.html#read-an-excel-file-using-pandas-1",
+    "title": "Using Cypher in Python",
+    "section": "8 Read an excel file using pandas",
+    "text": "8 Read an excel file using pandas\nherb_name = \"Ginger\"\n[df_name, df_information] = df0\ndf_name.shape, df_information.shape"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#read-an-excel-file-using-pandas-2",
+    "href": "posts/cypher-python/index.html#read-an-excel-file-using-pandas-2",
+    "title": "Using Cypher in Python",
+    "section": "9 Read an excel file using pandas",
+    "text": "9 Read an excel file using pandas\nnode_herb = Node(\"Herb\", name=herb_name)\n\ntuples = create_tuple_list(df_name)\nfor tuple in tuples:\n\n  for index, value in enumerate(tuple):\n\n    node_nomen_cat = Node(\"Nomenclature_Category\", name=tuple[ind_nomen-1])\n    node_ref = Node(\"Citation\", name=tuple[ind_ref], link=tuple[ind_ref+1])\n\n    if (index &gt;= ind_nomen and index &lt; ind_ref and value != ''):\n  \n      graph.merge(node_herb, \"Herb\", \"name\")\n      graph.merge(node_nomen_cat, \"Nomenclature_Category\", \"name\")\n      graph.merge(node_ref, \"Citation\", \"link\")\n\n      node_nomen = Node(\"Nomenclature\", name=tuple[index])\n\n      rel1 = Relationship(node_herb, \"IS_CALLED\", node_nomen)\n      rel2 = Relationship(node_nomen, \"CATEGORIZED\", node_nomen_cat)\n      rel3 = Relationship(node_nomen, \"CITE\", node_ref)\n\n      graph.create(rel1)\n      graph.create(rel2)\n      graph.create(rel3)"
+  },
+  {
+    "objectID": "posts/cypher-python/index.html#check-data-in-the-database",
+    "href": "posts/cypher-python/index.html#check-data-in-the-database",
+    "title": "Using Cypher in Python",
+    "section": "10 Check data in the database",
+    "text": "10 Check data in the database\nquery = '''\nmatch (n:Herb {name: %s})-[:IS_CALLED]-(m)\nreturn m\n''' % herb_name\n\nresult = graph.run(query)\n\nlist(result)"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html#create-a-database-connection-pagesgetdata.ts",
+    "href": "posts/neo4j-nextjs/index.html#create-a-database-connection-pagesgetdata.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "3 Create a database connection pages/getdata.ts",
+    "text": "3 Create a database connection pages/getdata.ts\nimport { NextApiRequest, NextApiResponse } from \"next\";\nimport neo4j, { Driver, Session, Result, Record } from \"neo4j-driver\";\nimport { log } from \"console\";\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\n// Define the type for properties\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\n// API route handler\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const session: Session = driver.session();\n\n  try {\n    // Perform your Neo4j queries and logic here\n    const result = await session.run(\"MATCH (n) RETURN n LIMIT 5\");\n    \n    // const nodes: Record&lt;string, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n    const nodes: Dict&lt;PropertyKey, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n\n    console.log(nodes);\n\n    const jsonData = JSON.stringify(nodes);\n\n    res.status(200).json({ data: jsonData });\n\n  } catch (error) {\n    console.error(\"Error executing Neo4j query:\", error);\n    res.status(500).json({ error: \"Internal Server Error\" });\n  } finally {\n    session.close();\n  }\n}"
+  },
+  {
+    "objectID": "posts/neo4j-nextjs/index.html#create-a-database-connection-pagesgraph-data.ts",
+    "href": "posts/neo4j-nextjs/index.html#create-a-database-connection-pagesgraph-data.ts",
+    "title": "Create an API of Neo4j Database in Next.js",
+    "section": "3 Create a database connection pages/graph-data.ts",
+    "text": "3 Create a database connection pages/graph-data.ts\nimport { NextApiRequest, NextApiResponse } from \"next\";\nimport neo4j, { Driver, Session, Result, Record } from \"neo4j-driver\";\nimport { log } from \"console\";\n\nconst driver = neo4j.driver(\n  \"bolt://44.201.240.207:7687\",\n  neo4j.auth.basic(\"neo4j\", \"job-returns-machines\")\n);\n\n// Define the type for properties\ntype Dict&lt;T extends PropertyKey, U&gt; = {\n  [K in T]: U;\n};\n\n// API route handler\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const session: Session = driver.session();\n\n  try {\n    // Perform your Neo4j queries and logic here\n    const result = await session.run(\"MATCH (n) RETURN n LIMIT 5\");\n    \n    // const nodes: Record&lt;string, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n    const nodes: Dict&lt;PropertyKey, any&gt;[] = result.records.map(record =&gt; record.get('n').properties);\n\n    console.log(nodes);\n\n    const jsonData = JSON.stringify(nodes);\n\n    res.status(200).json({ data: jsonData });\n\n  } catch (error) {\n    console.error(\"Error executing Neo4j query:\", error);\n    res.status(500).json({ error: \"Internal Server Error\" });\n  } finally {\n    session.close();\n  }\n}"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html",
+    "href": "posts/nextjs-redux/index.html",
+    "title": "Using Redux in Next.js",
+    "section": "",
+    "text": "Create the slices of states and hooks.\nimport { createSlice } from \"@reduxjs/toolkit\";\nimport type { PayloadAction } from \"@reduxjs/toolkit\";\n\nexport interface SearchState {\n  term: string;\n}\nconst initialState: SearchState = {\n  term: \"\",\n};\nconst searchSlice = createSlice({\n  name: \"search\",\n  initialState,\n  reducers: {\n    setTerm(state, action: PayloadAction&lt;string&gt;) {\n      state.term = action.payload.trim();\n    },\n  },\n});\n\nexport const {\n  setTerm,\n} = searchSlice.actions;\nexport default searchSlice.reducer;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-providers-for-a-redux-store",
+    "href": "posts/nextjs-redux/index.html#create-providers-for-a-redux-store",
+    "title": "Using Redux in Next.js",
+    "section": "4 Create Providers for a Redux store",
+    "text": "4 Create Providers for a Redux store\nThe Providers component used for wrapping components as a parent component that child components can import states and hooks just by importing (not as a component props).\n\"use client\";\nimport { Provider } from \"react-redux\";\nimport { store } from \"./store\";\n\nexport default function Providers({ children }: { children: React.ReactNode }) {\n  return &lt;Provider store={store}&gt;{children}&lt;/Provider&gt;;\n}"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-a-redux-store",
+    "href": "posts/nextjs-redux/index.html#create-a-redux-store",
+    "title": "Using Redux in Next.js",
+    "section": "3 Create a Redux store",
+    "text": "3 Create a Redux store\nCreate a Redux store for state and api slices.\nimport { configureStore } from \"@reduxjs/toolkit\"\nimport { useDispatch, useSelector } from \"react-redux\";\nimport type { TypedUseSelectorHook } from \"react-redux\";\n\nimport searchReducer from \"./sliceStateSearch\"\nimport { herbApi } from \"./sliceApiHerb\";\n\nexport const store = configureStore({\n  reducer: {\n    search: searchReducer,\n    [herbApi.reducerPath]: herbApi.reducer,\n  },\n  middleware(getDefaultMiddleware) {\n    return getDefaultMiddleware().concat(\n      herbApi.middleware\n    );\n  }\n  \n});\n\ntype AppDispatch = typeof store.dispatch;\ntype RootState = ReturnType&lt;typeof store.getState&gt;;\nexport const useAppDispatch = () =&gt; useDispatch&lt;AppDispatch&gt;();\nexport const useAppSelector: TypedUseSelectorHook&lt;RootState&gt; = useSelector;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-a-redux-store-1",
+    "href": "posts/nextjs-redux/index.html#create-a-redux-store-1",
+    "title": "Using Redux in Next.js",
+    "section": "4 Create a Redux store",
+    "text": "4 Create a Redux store\nCreate a Redux store for state and api slices.\nimport { configureStore } from \"@reduxjs/toolkit\"\nimport { useDispatch, useSelector } from \"react-redux\";\nimport type { TypedUseSelectorHook } from \"react-redux\";\n\nimport searchReducer from \"./sliceStateSearch\"\nimport { herbApi } from \"./sliceApiHerb\";\n\nexport const store = configureStore({\n  reducer: {\n    search: searchReducer,\n    [herbApi.reducerPath]: herbApi.reducer,\n  },\n  middleware(getDefaultMiddleware) {\n    return getDefaultMiddleware().concat(\n      herbApi.middleware\n    );\n  }\n  \n});\n\ntype AppDispatch = typeof store.dispatch;\ntype RootState = ReturnType&lt;typeof store.getState&gt;;\nexport const useAppDispatch = () =&gt; useDispatch&lt;AppDispatch&gt;();\nexport const useAppSelector: TypedUseSelectorHook&lt;RootState&gt; = useSelector;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-a-redux-store-2",
+    "href": "posts/nextjs-redux/index.html#create-a-redux-store-2",
+    "title": "Using Redux in Next.js",
+    "section": "4 Create a Redux store",
+    "text": "4 Create a Redux store\nCreate a Redux store for state and api slices.\nimport { configureStore } from \"@reduxjs/toolkit\"\nimport { useDispatch, useSelector } from \"react-redux\";\nimport type { TypedUseSelectorHook } from \"react-redux\";\n\nimport searchReducer from \"./sliceStateSearch\"\nimport { herbApi } from \"./sliceApiHerb\";\n\nexport const store = configureStore({\n  reducer: {\n    search: searchReducer,\n    [herbApi.reducerPath]: herbApi.reducer,\n  },\n  middleware(getDefaultMiddleware) {\n    return getDefaultMiddleware().concat(\n      herbApi.middleware\n    );\n  }\n  \n});\n\ntype AppDispatch = typeof store.dispatch;\ntype RootState = ReturnType&lt;typeof store.getState&gt;;\nexport const useAppDispatch = () =&gt; useDispatch&lt;AppDispatch&gt;();\nexport const useAppSelector: TypedUseSelectorHook&lt;RootState&gt; = useSelector;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-rtk-queries",
+    "href": "posts/nextjs-redux/index.html#create-rtk-queries",
+    "title": "Using Redux in Next.js",
+    "section": "2 Create RTK queries",
+    "text": "2 Create RTK queries\nThe api slices with endpoints for various use cases are managed by Redux for caching, validating, mutating, etc. .\nimport { DataProps } from \"@/interfaces/graph\";\nimport { createApi, fetchBaseQuery } from \"@reduxjs/toolkit/query/react\";\nimport { SearchNodesApiProps } from \"@/interfaces\";\n\nexport const herbApi = createApi({\n  reducerPath: \"herbApiSlice\",\n  // baseQuery: fetchBaseQuery({ baseUrl: \"/api\"}),\n  baseQuery: fetchBaseQuery({ baseUrl: \"/graph-db/api\"}), //check next.config \n  tagTypes: [\"herbs\"],\n  endpoints: (builder) =&gt; ({\n\n    herbs: builder.query&lt;DataProps, void&gt;({\n      query: () =&gt; \"\",\n      providesTags: (result, error, search) =&gt; [{ type: \"herbs\", search}]\n    }),\n\n    searchNode: builder.mutation&lt;DataProps, SearchNodesApiProps&gt;({\n      query: (body) =&gt; ({\n        url: \"/post-search-node\",\n        method: \"POST\",\n        body,\n      }),\n    }),\n\n  })\n})\n\nexport const { useHerbsQuery, useSearchNodeMutation } = herbApi;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#create-states-and-hooks",
+    "href": "posts/nextjs-redux/index.html#create-states-and-hooks",
+    "title": "Using Redux in Next.js",
+    "section": "",
+    "text": "Create the slices of states and hooks.\nimport { createSlice } from \"@reduxjs/toolkit\";\nimport type { PayloadAction } from \"@reduxjs/toolkit\";\n\nexport interface SearchState {\n  term: string;\n}\nconst initialState: SearchState = {\n  term: \"\",\n};\nconst searchSlice = createSlice({\n  name: \"search\",\n  initialState,\n  reducers: {\n    setTerm(state, action: PayloadAction&lt;string&gt;) {\n      state.term = action.payload.trim();\n    },\n  },\n});\n\nexport const {\n  setTerm,\n} = searchSlice.actions;\nexport default searchSlice.reducer;"
+  },
+  {
+    "objectID": "posts/nextjs-redux/index.html#wrap-providers-in-the-app",
+    "href": "posts/nextjs-redux/index.html#wrap-providers-in-the-app",
+    "title": "Using Redux in Next.js",
+    "section": "5 Wrap Providers in the app",
+    "text": "5 Wrap Providers in the app\nimport Providers from \"@/context/Providers\";\n\nexport default function Home() {\n\n  return (\n    &lt;main&gt;\n      &lt;Providers&gt;\n        ...\n      &lt;/Providers&gt;\n    &lt;/main&gt;\n  );\n}"
   }
 ]

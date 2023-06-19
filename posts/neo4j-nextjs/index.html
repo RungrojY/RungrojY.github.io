@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/sun.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -119,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
@@ -179,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#test-a-connection-in-nodejs" id="toc-test-a-connection-in-nodejs" class="nav-link active" data-scroll-target="#test-a-connection-in-nodejs"><span class="header-section-number">1</span> Test a connection in NodeJS`</a></li>
   <li><a href="#firstly-create-simple-api-in-pageshello.ts" id="toc-firstly-create-simple-api-in-pageshello.ts" class="nav-link" data-scroll-target="#firstly-create-simple-api-in-pageshello.ts"><span class="header-section-number">2</span> Firstly, create simple API in <code>pages/hello.ts</code></a></li>
-  <li><a href="#create-a-database-connection-pageshello.ts" id="toc-create-a-database-connection-pageshello.ts" class="nav-link" data-scroll-target="#create-a-database-connection-pageshello.ts"><span class="header-section-number">3</span> Create a database connection <code>pages/hello.ts</code></a></li>
+  <li><a href="#create-a-database-connection-pagesgraph-data.ts" id="toc-create-a-database-connection-pagesgraph-data.ts" class="nav-link" data-scroll-target="#create-a-database-connection-pagesgraph-data.ts"><span class="header-section-number">3</span> Create a database connection <code>pages/graph-data.ts</code></a></li>
   </ul>
 </nav>
 </nav>
@@ -243,8 +244,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="create-a-database-connection-pageshello.ts" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="create-a-database-connection-pageshello.ts"><span class="header-section-number">3</span> Create a database connection <code>pages/hello.ts</code></h2>
+<section id="create-a-database-connection-pagesgraph-data.ts" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="create-a-database-connection-pagesgraph-data.ts"><span class="header-section-number">3</span> Create a database connection <code>pages/graph-data.ts</code></h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { NextApiRequest<span class="op">,</span> NextApiResponse } <span class="im">from</span> <span class="st">"next"</span><span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> neo4j<span class="op">,</span> { Driver<span class="op">,</span> Session<span class="op">,</span> Result<span class="op">,</span> Record } <span class="im">from</span> <span class="st">"neo4j-driver"</span><span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { log } <span class="im">from</span> <span class="st">"console"</span><span class="op">;</span></span>
