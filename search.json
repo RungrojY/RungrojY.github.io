@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to Runroj Yadbantung’s memos",
     "section": "",
-    "text": "Setup Hadoop Cluster in Ubuntu Multipass\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+    "text": "Using Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster in Ubuntu Multipass\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/neo4j-in-nextjs/index.html",
@@ -824,5 +824,138 @@
     "title": "Using Redux in Next.js",
     "section": "5 Wrap Providers in the app",
     "text": "5 Wrap Providers in the app\nimport Providers from \"@/context/Providers\";\n\nexport default function Home() {\n\n  return (\n    &lt;main&gt;\n      &lt;Providers&gt;\n        ...\n      &lt;/Providers&gt;\n    &lt;/main&gt;\n  );\n}"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html",
+    "href": "posts/using-rsync/index.html",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync [options] source destination\n\n\n\nwhich rsync\n\n# If rsync is installed =&gt;\n# /usr/bin/rsync\n\n\n\nrsync -av ~/aaa ubuntu@slave-1:~/\n\n# Copy file `aaa` to remote machine\nrsync -avzphi ~/aaa ubuntu@slave-1:~/\n\n# Copy file from remote machine\nrsync -avzphi ubuntu@slave-1:~/aaa ~/\n\n\n\nman rsync\n\n\n\nparam\nduty\n\n\n\n\na\narchive\n\n\nv\nverbose\n\n\nz\ncompress\n\n\np\npermissions\n\n\nh\nhuman-readable\n\n\ni\nitemize-changes\n\n\n\n\n\n\n\n\nrsync -avzphi /cygdrive/c/users/Jorgnur/Desktop/xxx ubuntu@192.168.1.120:~/\n\n\n\nrsync -avzphi ubuntu@192.168.1.120:~/xxx /cygdrive/c/users/Jorgnur/Desktop/\n\n\n\npdsh -w ^hosts.txt rsync -avzphi ~/aaa ubuntu@%:~/\npdsh -H \"$(cat hosts.txt | tr '\\n' ',')\" \"rsync -avzphi ~/aaa ubuntu@%:~/\""
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#display-database-schema",
+    "href": "posts/using-rsync/index.html#display-database-schema",
+    "title": "Cypher Query",
+    "section": "",
+    "text": "CALL db.schema.visualization()"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#syntax",
+    "href": "posts/using-rsync/index.html#syntax",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync [options] source destination"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#check-if-rsync-is-installed-or-not",
+    "href": "posts/using-rsync/index.html#check-if-rsync-is-installed-or-not",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "which rsync\n\n# If rsync is installed =&gt;\n# /usr/bin/rsync"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#example",
+    "href": "posts/using-rsync/index.html#example",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync -av ~/aaa ubuntu@slave-1:~/\n\n# Copy file `aaa` to remote machine\nrsync -avzphi ~/aaa ubuntu@slave-1:~/\n\n# Copy file from remote machine\nrsync -avzphi ubuntu@slave-1:~/aaa ~/"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#get-help",
+    "href": "posts/using-rsync/index.html#get-help",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "man rsync\n\n\n\nparam\nduty\n\n\n\n\na\narchive\n\n\nv\nverbose\n\n\nz\ncompress\n\n\np\npermissions\n\n\nh\nhuman-readable\n\n\ni\nitemize-changes"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#example-for-cygwin",
+    "href": "posts/using-rsync/index.html#example-for-cygwin",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync -avzphi /cygdrive/c/users/Jorgnur/Desktop/xxx ubuntu@192.168.1.120:~/\n\n\n\nrsync -avzphi ubuntu@192.168.1.120:~/xxx /cygdrive/c/users/Jorgnur/Desktop/"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html",
+    "href": "posts/using-multipass/index.html",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "multipass shell &lt;image-name&gt;\n\n\n\nCreate Ubuntu Server image with yaml file. The word focal refers to Ubuntu 20.04 LTS.\nmultipass launch --name hadoop0 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\nmultipass launch --name hadoop1 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\nmultipass launch --name hadoop2 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\npackage_update: true\npackage_upgrade: true\npackages:\n  - openjdk-8-jdk\n\n\n\nDelete created images\nmultipass delete &lt;image-name&gt;\n\n\n\nSuppose I has a text file (test.txt) and I want to transfer a file from a Window system into Ubuntu VM\nmultipass transfer test.txt hadoop0:/home/ubuntu/\n# or\nmultipass transfer C:\\Users\\Jorgnur\\Downloads\\hadoop-3.3.5.tar.gz hadoop0:/home/ubuntu/\nSuppose I has a folder (test) and I want to transfer a file from a Window system into Ubuntu VM\nmultipass transfer -r test hadoop0:/home/ubuntu/\n\n\n\nIf you do not set the password at first when creating VM, use the following command to set new password.\nsudo passwd ubuntu\n\n\n\nThe IP address assigned to instances is dynamic by default, to assign the IP address use this command\nmultipass set instance-name --address 192.168.1.22\n#\nmultipass set instance-name --address 192.168.1.22\n\n\n\nStop the instance you want to modify:\nmultipass stop hadoop0\nIncrease the number of CPU cores:\nmultipass set hadoop0 --cpus 2\nIncrease the amount of RAM:\nmultipass set hadoop0 --mem 2G\nIncrease the disk size:\nmultipass set hadoop0 --disk 10G\nStart the instance again:\nmultipass start hadoop0"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#start-shell-image",
+    "href": "posts/using-multipass/index.html#start-shell-image",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "multipass shell &lt;image-name&gt;"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#create-virtual-machine-with-yaml",
+    "href": "posts/using-multipass/index.html#create-virtual-machine-with-yaml",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "Create Ubuntu Server image with yaml file. The word focal refers to Ubuntu 20.04 LTS.\nmultipass launch --name hadoop0 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\nmultipass launch --name hadoop1 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\nmultipass launch --name hadoop2 --network Wi-Fi --cloud-init setup-ubuntu.yaml focal\npackage_update: true\npackage_upgrade: true\npackages:\n  - openjdk-8-jdk"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#delete-images",
+    "href": "posts/using-multipass/index.html#delete-images",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "Delete created images\nmultipass delete &lt;image-name&gt;"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#transfer-a-file",
+    "href": "posts/using-multipass/index.html#transfer-a-file",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "Suppose I has a text file (test.txt) and I want to transfer a file from a Window system into Ubuntu VM\nmultipass transfer test.txt hadoop0:/home/ubuntu/\n# or\nmultipass transfer C:\\Users\\Jorgnur\\Downloads\\hadoop-3.3.5.tar.gz hadoop0:/home/ubuntu/\nSuppose I has a folder (test) and I want to transfer a file from a Window system into Ubuntu VM\nmultipass transfer -r test hadoop0:/home/ubuntu/"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#set-user-password",
+    "href": "posts/using-multipass/index.html#set-user-password",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "If you do not set the password at first when creating VM, use the following command to set new password.\nsudo passwd ubuntu"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#set-a-fixed-ip-address-for-your-instances",
+    "href": "posts/using-multipass/index.html#set-a-fixed-ip-address-for-your-instances",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "The IP address assigned to instances is dynamic by default, to assign the IP address use this command\nmultipass set instance-name --address 192.168.1.22\n#\nmultipass set instance-name --address 192.168.1.22"
+  },
+  {
+    "objectID": "posts/using-multipass/index.html#add-more-resource",
+    "href": "posts/using-multipass/index.html#add-more-resource",
+    "title": "Using Multipass",
+    "section": "",
+    "text": "Stop the instance you want to modify:\nmultipass stop hadoop0\nIncrease the number of CPU cores:\nmultipass set hadoop0 --cpus 2\nIncrease the amount of RAM:\nmultipass set hadoop0 --mem 2G\nIncrease the disk size:\nmultipass set hadoop0 --disk 10G\nStart the instance again:\nmultipass start hadoop0"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#examples",
+    "href": "posts/using-rsync/index.html#examples",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync -av ~/aaa ubuntu@slave-1:~/\n\n# Copy file `aaa` to remote machine\nrsync -avzphi ~/aaa ubuntu@slave-1:~/\n\n# Copy file from remote machine\nrsync -avzphi ubuntu@slave-1:~/aaa ~/"
+  },
+  {
+    "objectID": "posts/using-rsync/index.html#examples-for-cygwin",
+    "href": "posts/using-rsync/index.html#examples-for-cygwin",
+    "title": "Using rsync in Linux",
+    "section": "",
+    "text": "rsync -avzphi /cygdrive/c/users/Jorgnur/Desktop/xxx ubuntu@192.168.1.120:~/\n\n\n\nrsync -avzphi ubuntu@192.168.1.120:~/xxx /cygdrive/c/users/Jorgnur/Desktop/\n\n\n\npdsh -w ^hosts.txt rsync -avzphi ~/aaa ubuntu@%:~/\npdsh -H \"$(cat hosts.txt | tr '\\n' ',')\" \"rsync -avzphi ~/aaa ubuntu@%:~/\""
+  },
+  {
+    "objectID": "posts/using-hadoop/index.html",
+    "href": "posts/using-hadoop/index.html",
+    "title": "Using Hadoop",
+    "section": "",
+    "text": "bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep input output 'dfs[a-z.]+'"
+  },
+  {
+    "objectID": "posts/using-hadoop/index.html#run-hadoop-examples",
+    "href": "posts/using-hadoop/index.html#run-hadoop-examples",
+    "title": "Using Hadoop",
+    "section": "",
+    "text": "bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep input output 'dfs[a-z.]+'"
   }
 ]

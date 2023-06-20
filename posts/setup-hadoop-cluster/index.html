@@ -96,6 +96,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+  function handleKeyDown(event) {
+    // Check if the event key is 'K' and the Ctrl key is pressed
+    if (event.key === '/') {
+      // Open the search box
+      const quartoSearch = document.querySelector('#quarto-search');
+      const button = quartoSearch.querySelector('.aa-DetachedSearchButton');
+      button.click();
+    }
+  }
+  document.addEventListener('keydown', handleKeyDown);
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">

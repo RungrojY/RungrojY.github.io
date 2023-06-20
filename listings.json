@@ -2,12 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/using-hadoop/index.html",
+      "/posts/using-rsync/index.html",
       "/posts/setup-hadoop-cluster/index.html",
       "/posts/nextjs-redux/index.html",
       "/posts/neo4j-nextjs/index.html",
       "/posts/cypher-python/index.html",
       "/posts/cypher-query/index.html",
-      "/posts/typescript_basic_usage/index.html"
+      "/posts/typescript_basic_usage/index.html",
+      "/posts/using-multipass/index.html"
     ]
   }
 ]
