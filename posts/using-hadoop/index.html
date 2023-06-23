@@ -190,9 +190,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
-  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link active" data-scroll-target="#basic-usage"><span class="header-section-number">1</span> Basic Usage</a>
+  <li><a href="#run-mapreduce-examples" id="toc-run-mapreduce-examples" class="nav-link active" data-scroll-target="#run-mapreduce-examples"><span class="header-section-number">1</span> Run MapReduce examples</a>
   <ul class="collapse">
-  <li><a href="#run-hadoop-examples" id="toc-run-hadoop-examples" class="nav-link" data-scroll-target="#run-hadoop-examples"><span class="header-section-number">1.1</span> Run Hadoop Examples</a></li>
+  <li><a href="#matching-a-word-in-files" id="toc-matching-a-word-in-files" class="nav-link" data-scroll-target="#matching-a-word-in-files"><span class="header-section-number">1.1</span> Matching a word in files</a></li>
+  <li><a href="#starting-yarn" id="toc-starting-yarn" class="nav-link" data-scroll-target="#starting-yarn"><span class="header-section-number">1.2</span> Starting yarn</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">2</span> Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#conflict-in-clusterids" id="toc-conflict-in-clusterids" class="nav-link" data-scroll-target="#conflict-in-clusterids"><span class="header-section-number">2.1</span> Conflict in clusterIDs</a></li>
+  <li><a href="#incompatibility-issue" id="toc-incompatibility-issue" class="nav-link" data-scroll-target="#incompatibility-issue"><span class="header-section-number">2.2</span> Incompatibility issue</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -207,11 +213,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="basic-usage" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Basic Usage</h1>
-<section id="run-hadoop-examples" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="run-hadoop-examples"><span class="header-section-number">1.1</span> Run Hadoop Examples</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hadoop</span> jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep input output <span class="st">'dfs[a-z.]+'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="run-mapreduce-examples" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Run MapReduce examples</h1>
+<section id="matching-a-word-in-files" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="matching-a-word-in-files"><span class="header-section-number">1.1</span> Matching a word in files</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check JAVA is running</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> namenode <span class="at">-format</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">start-dfs.sh</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-mkdir</span> /user</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-mkdir</span> /user/john</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-mkdir</span> /input</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-put</span> ~/hadoop-3.3.5/etc/hadoop/<span class="pp">*</span>.xml /input</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-ls</span> /input</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">hadoop</span> jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep /input /output <span class="st">'dfs[a-z.]+'</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-ls</span> /output</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-cat</span> /output/<span class="pp">*</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># can also copy the output directory to `~/output`</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-get</span> /output ~/output</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/output/<span class="pp">*</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ex">stop-dfs.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="starting-yarn" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="starting-yarn"><span class="header-section-number">1.2</span> Starting yarn</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">start-yarn.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>ResourceManager and NodeManager will show up</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ jps</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>14357 SecondaryNameNode</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>13943 NameNode</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>14135 DataNode</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>14569 Jps</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ start-yarn.sh</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Starting resourcemanager</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>Starting nodemanagers</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ jps</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>14833 NodeManager</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>14357 SecondaryNameNode</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>13943 NameNode</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>14135 DataNode</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>15145 Jps</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>14652 ResourceManager</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ubuntu@node0:~/hadoop-3.3.5/etc/hadoop$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Browse the web interface for the ResourceManager</p>
+<p><code>http://localhost:8088</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hadoop</span> jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep input output <span class="st">'dfs[a-z.]+'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="troubleshooting" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Troubleshooting</h1>
+<section id="conflict-in-clusterids" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="conflict-in-clusterids"><span class="header-section-number">2.1</span> Conflict in clusterIDs</h2>
+<p>If you reinstall or recreate the Hadoop cluster on Multipass Ubuntu, the clusterID might change. The <strong>Datanode can not be started</strong>. Solving between conflict between Namenode clusterID and Datanode clusterID,</p>
+<p>checking log with the command</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/hadoop-3.3.5/logs/hadoop-ubuntu-datanode-node0.log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>the problem is shown in log file as</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>logs/hadoop-ubuntu-datanode-node0.log</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>2023-06-22 06:23:24,449 WARN org.apache.hadoop.hdfs.server.common.Storage: Failed to add storage directory [DISK]file:/tmp/hadoop-ubuntu/dfs/data</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>java.io.IOException: Incompatible clusterIDs in /tmp/hadoop-ubuntu/dfs/data: namenode clusterID = CID-ec7e5f04-e16f-4a33-afeb-ce45032aa09c; datanode clusterID = CID-8056152a-0184-4cfe-8fbe-b16cf655140e</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>2023-06-22 06:23:24,460 ERROR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Edit the <code>VERSION</code> file with</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> /tmp/hadoop-ubuntu/dfs/data/current/VERSION</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Change the <code>clusterID</code> in file as in the log as <code>clusterID = CID-ec7e5f04-e16f-4a33-afeb-ce45032aa09c</code>.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>VERSION</strong></pre>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>#Wed Jun 21 22:47:29 ICT 2023</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>storageID=DS-87747f6d-f615-4b10-97ec-019c72544fe8</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>clusterID=CID-ec7e5f04-e16f-4a33-afeb-ce45032aa09c</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>cTime=0</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>datanodeUuid=3a51fe58-e17d-4ce9-8598-e93378acad0c</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>storageType=DATA_NODE</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>layoutVersion=-57</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="incompatibility-issue" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="incompatibility-issue"><span class="header-section-number">2.2</span> Incompatibility issue</h2>
+<p>The error message you encountered in Hadoop indicates that the cluster ID of the NameNode does not match the cluster ID of the DataNode. This mismatch prevents the DataNode from successfully communicating with the NameNode.</p>
+<p>To resolve this issue, you can follow these steps:</p>
+<ol type="1">
+<li><p>Stop all Hadoop services, including the NameNode and DataNode.</p></li>
+<li><p>Delete the contents of the directories specified in the <code>dfs.namenode.name.dir</code> and <code>dfs.datanode.data.dir</code> properties. In this case, you should delete the contents of <code>/home/ubuntu/namenode</code> and <code>/home/ubuntu/datanode</code>.</p></li>
+<li><p>After removing the contents of the directories specified, you need to ensure that the <code>dfs.namenode.name.dir</code> and <code>dfs.datanode.data.dir</code> properties have the same values across all nodes in your Hadoop cluster. Verify that these properties are identical on both the NameNode and DataNode.</p></li>
+<li><p>Start the Hadoop services, beginning with the NameNode and then the DataNode.</p></li>
+</ol>
+<p>The cluster ID in Hadoop is a unique identifier assigned to each Hadoop cluster. It is generated when the NameNode is formatted for the first time. The cluster ID is stored in the <code>VERSION</code> file within the NameNode’s metadata directory.</p>
+<p>When a DataNode starts up, it reads the cluster ID from the <code>VERSION</code> file of the NameNode it connects to and compares it with its own cluster ID. If the cluster IDs do not match, it indicates that the DataNode belongs to a different Hadoop cluster. In such a case, the DataNode refuses to join the cluster and throws the “Incompatible clusterIDs” error.</p>
 
 
 </section>

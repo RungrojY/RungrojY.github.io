@@ -224,7 +224,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create Ubuntu Server image with <code>yaml</code> file. The word <code>focal</code> refers to Ubuntu 20.04 LTS.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> hadoop0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml focal</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> hadoop1 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml focal</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> hadoop2 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml focal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> hadoop2 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml focal</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>esktop<span class="dt">\C</span>lound<span class="dt">\m</span>ultipass<span class="dt">\s</span>etup-ubuntu.yaml <span class="at">--disk</span> 10G <span class="at">--mem</span> 4G <span class="at">--cpus</span> 2 focal</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml <span class="at">--disk</span> 10G <span class="at">--mem</span> 4G <span class="at">--cpus</span> 2 focal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">package_update</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">package_upgrade</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
@@ -260,14 +264,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.7" class="anchored" data-anchor-id="add-more-resource"><span class="header-section-number">1.7</span> Add more resource</h2>
 <p>Stop the instance you want to modify:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> stop hadoop0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Increase the number of CPU cores:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> set hadoop0 <span class="at">--cpus</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Update new CPUs, disk and memory to <code>hadoop0</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> multipass stop hadoop0</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> multipass set local.hadoop0.cpus=4</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> multipass set local.hadoop0.disk=10G</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> multipass set local.hadoop0.memory=2G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Increase the amount of RAM:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> set hadoop0 <span class="at">--mem</span> 2G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Increase the disk size:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> set hadoop0 <span class="at">--disk</span> 10G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Start the instance again:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> start hadoop0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

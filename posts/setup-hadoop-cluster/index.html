@@ -215,6 +215,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#permission-denied" id="toc-permission-denied" class="nav-link" data-scroll-target="#permission-denied"><span class="header-section-number">2.1</span> Permission denied</a></li>
   <li><a href="#namenode-web-interface" id="toc-namenode-web-interface" class="nav-link" data-scroll-target="#namenode-web-interface"><span class="header-section-number">2.2</span> NameNode Web Interface</a></li>
   <li><a href="#navigate-hadoop-files" id="toc-navigate-hadoop-files" class="nav-link" data-scroll-target="#navigate-hadoop-files"><span class="header-section-number">2.3</span> Navigate Hadoop Files</a></li>
+  <li><a href="#obtain-public-key-of-each" id="toc-obtain-public-key-of-each" class="nav-link" data-scroll-target="#obtain-public-key-of-each"><span class="header-section-number">2.4</span> Obtain public key of each</a></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">2.5</span> Configuration files</a></li>
+  <li><a href="#configuring-environment-of-hadoop-daemons" id="toc-configuring-environment-of-hadoop-daemons" class="nav-link" data-scroll-target="#configuring-environment-of-hadoop-daemons"><span class="header-section-number">2.6</span> Configuring Environment of Hadoop Daemons</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -271,11 +274,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><strong>Window Terminal</strong></pre>
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the default resources are 1 CPU cores, ~1 GB memory and ~5 GB disk space.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml focal</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>esktop<span class="dt">\C</span>lound<span class="dt">\m</span>ultipass<span class="dt">\s</span>etup-ubuntu.yaml focal</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or add more resources with the command</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">--name</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> setup-ubuntu.yaml <span class="at">--disk</span> 10G <span class="at">--mem</span> 2G <span class="at">--cpus</span> 2 focal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">-n</span> node0 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>esktop<span class="dt">\C</span>lound<span class="dt">\m</span>ultipass<span class="dt">\s</span>etup-ubuntu.yaml <span class="at">-c</span> 1 <span class="at">-d</span> 10G <span class="at">-m</span> 4G focal</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">-n</span> node1 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>esktop<span class="dt">\C</span>lound<span class="dt">\m</span>ultipass<span class="dt">\s</span>etup-ubuntu.yaml <span class="at">-c</span> 1 <span class="at">-d</span> 10G <span class="at">-m</span> 2G focal</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> launch <span class="at">-n</span> node2 <span class="at">--network</span> Wi-Fi <span class="at">--cloud-init</span> C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>esktop<span class="dt">\C</span>lound<span class="dt">\m</span>ultipass<span class="dt">\s</span>etup-ubuntu.yaml <span class="at">-c</span> 1 <span class="at">-d</span> 10G <span class="at">-m</span> 2G focal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The word <code>focal</code> refers to Ubuntu 20.04 LTS.</p>
+<p>The word <code>focal</code> refers to Ubuntu 20.04 LTS. The IP addresses are obtain as</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>hostname</th>
+<th>role</th>
+<th>IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>node0</td>
+<td>namenode</td>
+<td>192.168.1.127</td>
+</tr>
+<tr class="even">
+<td>node1</td>
+<td>datanode</td>
+<td>192.168.1.128</td>
+</tr>
+<tr class="odd">
+<td>node2</td>
+<td>datanode</td>
+<td>192.168.1.129</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="generate-rsa-key-pairs" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="generate-rsa-key-pairs"><span class="header-section-number">1.2</span> Generate rsa key pairs</h2>
@@ -297,9 +328,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.3" class="anchored" data-anchor-id="replace-ip-address-with-its-names"><span class="header-section-number">1.3</span> Replace IP address with its names</h2>
 <p>In order to call the IP address, we can replace the IP addresses as their short name.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> /etc/hosts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.120</span> node0</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.121</span> node1</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.123</span> node2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.127</span> node0</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.128</span> node1</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.129</span> node2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="install-pdsh-parallel-distributed-shell-in-node0" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="install-pdsh-parallel-distributed-shell-in-node0"><span class="header-section-number">1.4</span> Install <code>pdsh</code> (Parallel Distributed Shell) in <code>node0</code></h2>
@@ -325,10 +356,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>hosts.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.120</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.121</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.127</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.128</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.129</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh</span> <span class="at">-w</span> ^hosts.txt hostname</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="prepare-the-file" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="prepare-the-file"><span class="header-section-number">1.5</span> Prepare the file</h2>
@@ -337,24 +369,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>Window Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> transfer C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>ownloads<span class="dt">\h</span>adoop-3.3.5.tar.gz node0:/home/ubuntu/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multipass</span> transfer C:<span class="dt">\U</span>sers<span class="dt">\J</span>orgnur<span class="dt">\D</span>ownloads<span class="dt">\h</span>adoop-3.3.5.tar.gz node0:/home/ubuntu/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In Ubuntu, extract the file with the command</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> ~/Downloads/hadoop-3.2.3.tar.gz </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In Ubuntu, unpacking the software on all the machines in the cluster</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> ~/Downloads/hadoop-3.3.5.tar.gz </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="setup-.bashrc" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="setup-.bashrc"><span class="header-section-number">1.6</span> Setup <code>.bashrc</code></h2>
 <p>Edit <code>.bashrc</code> with</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">JAVA_HOME</span><span class="op">=</span>/usr/lib/jvm/java-8-openjdk-amd64</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$PATH</span>:<span class="va">$JAVA_HOME</span>/bin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">JAVA_HOME</span><span class="op">=</span>/usr/lib/jvm/java-8-openjdk-amd64</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$PATH</span>:<span class="va">$JAVA_HOME</span>/bin</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HADOOP_HOME</span><span class="op">=</span>~/hadoop-3.3.5</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$PATH</span>:<span class="va">$HADOOP_HOME</span>/bin</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$PATH</span>:<span class="va">$HADOOP_HOME</span>/sbin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>reload bash file</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span> ~/.bashrc</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># check the result with</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$PATH</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span> ~/.bashrc</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># check the result with</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$PATH</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="hadoop-configuration" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="hadoop-configuration"><span class="header-section-number">1.7</span> Hadoop Configuration</h2>
@@ -377,151 +412,210 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5/etc/hadoop</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># see file list in details</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lstr</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lstr</span> <span class="pp">*</span>env<span class="pp">*</span>.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5/etc/hadoop</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># see file list in details</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lstr</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lstr</span> <span class="pp">*</span>env<span class="pp">*</span>.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Open three files with the following commands</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/mapred-env.sh</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/hadoop-env.sh</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/yarn-env.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/mapred-env.sh</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/hadoop-env.sh</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/yarn-env.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and add <code>JAVA_HOME</code> below to all files.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">JAVA_HOME</span><span class="op">=</span>/usr/lib/jvm/java-8-openjdk-amd64</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">JAVA_HOME</span><span class="op">=</span>/usr/lib/jvm/java-8-openjdk-amd64</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="configure-core-site.xml" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="configure-core-site.xml"><span class="header-section-number">1.8</span> Configure <code>core-site.xml</code></h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/core-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Set master node --&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;fs.default.name&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;hdfs://192.168.1.120:50000&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/core-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Set master node --&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;fs.default.name&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;hdfs://192.168.1.127:50000&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="configure-yarn-site.xml" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="configure-yarn-site.xml"><span class="header-section-number">1.9</span> Configure <code>yarn-site.xml</code></h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.nodemanager.aux-services&lt;/<span class="kw">name</span>&gt; &lt;<span class="kw">value</span>&gt;mapreduce_shuffle&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/<span class="kw">name</span>&gt; </span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;The hostname of the RM.&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.resourcemanager.hostname&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;192.168.1.120&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;The address of the applications manager interface in the RM.&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.resourcemanager.address&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;192.168.1.120:8032&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.nodemanager.aux-services&lt;/<span class="kw">name</span>&gt; &lt;<span class="kw">value</span>&gt;mapreduce_shuffle&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/<span class="kw">name</span>&gt; </span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;The hostname of the RM.&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.resourcemanager.hostname&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;192.168.1.127&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;The address of the applications manager interface in the RM.&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;yarn.resourcemanager.address&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;192.168.1.127:8032&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="configure-hdfs-site.xml" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="configure-hdfs-site.xml"><span class="header-section-number">1.10</span> Configure <code>hdfs-site.xml</code></h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;dfs.namenode.name.dir&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;/home/ubuntu/hadoop-data/namenode-dir&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;dfs.datanode.data.dir&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;/home/ubuntu/hadoop-data/datanode-dir&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;dfs.namenode.name.dir&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;/home/ubuntu/hadoop-data/namenode-dir&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;dfs.datanode.data.dir&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;/home/ubuntu/hadoop-data/datanode-dir&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="configure-mapred-site.xml" class="level2" data-number="1.11">
 <h2 data-number="1.11" class="anchored" data-anchor-id="configure-mapred-site.xml"><span class="header-section-number">1.11</span> Configure <code>mapred-site.xml</code></h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;mapreduce.framework.name&lt;/<span class="kw">name</span>&gt;</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;yarn&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">property</span>&gt;</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;mapreduce.framework.name&lt;/<span class="kw">name</span>&gt;</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;yarn&lt;/<span class="kw">value</span>&gt;</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="set-workers-ip-address-only-in-master-node" class="level2" data-number="1.12">
 <h2 data-number="1.12" class="anchored" data-anchor-id="set-workers-ip-address-only-in-master-node"><span class="header-section-number">1.12</span> Set <code>workers</code> IP address Only in Master Node</h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.120</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.121</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.127</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.128</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.129</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="format-hdfs-namenode" class="level2" data-number="1.13">
 <h2 data-number="1.13" class="anchored" data-anchor-id="format-hdfs-namenode"><span class="header-section-number">1.13</span> Format HDFS NameNode</h2>
 <p>Let’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hdfs</span> namenode <span class="at">-format</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or (deprecated)</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hadoop</span> namenode <span class="at">-format</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hdfs</span> namenode <span class="at">-format</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or (deprecated)</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hadoop</span> namenode <span class="at">-format</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="general-usage-command" class="level2" data-number="1.14">
 <h2 data-number="1.14" class="anchored" data-anchor-id="general-usage-command"><span class="header-section-number">1.14</span> General Usage Command</h2>
 <section id="start-all" class="level3">
 <h3 class="anchored" data-anchor-id="start-all">Start all</h3>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/start-all.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/start-all.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="stop-all-command" class="level3">
 <h3 class="anchored" data-anchor-id="stop-all-command">Stop all command</h3>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/stop-all.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/stop-all.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="check-running-java-nodes" class="level3">
 <h3 class="anchored" data-anchor-id="check-running-java-nodes">Check running Java nodes</h3>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="hadoop-ui" class="level2" data-number="1.15">
 <h2 data-number="1.15" class="anchored" data-anchor-id="hadoop-ui"><span class="header-section-number">1.15</span> Hadoop UI</h2>
-<p>Let’s go the browser <code>http://localhost:9870/</code> of the Namenode, thus it is <a href="http://192.168.1.120:9870/">192.168.1.120:9870</a> for in this case.</p>
+<p>Let’s go the browser <code>http://localhost:9870/</code> of the Namenode, thus it is <a href="http://192.168.1.127:9870/">192.168.1.120:9870</a> for in this case.</p>
 </section>
 <section id="create-a-demo-file" class="level2" data-number="1.16">
 <h2 data-number="1.16" class="anchored" data-anchor-id="create-a-demo-file"><span class="header-section-number">1.16</span> Create a demo file</h2>
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>demo</strong></pre>
 </div>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Hello!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Hello!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hadoop</span> dfs <span class="at">-put</span> /home/ubuntu/demo /demo123</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hdfs</span> dfs <span class="at">-put</span> /home/ubuntu/demo /demo123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hadoop</span> dfs <span class="at">-put</span> /home/ubuntu/demo /demo123</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hdfs</span> dfs <span class="at">-put</span> /home/ubuntu/demo /demo123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="miscellaneous" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Miscellaneous</h1>
 <p>When running the command</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/start-all.sh</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/start-all.sh</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="permission-denied" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="permission-denied"><span class="header-section-number">2.1</span> Permission denied</h2>
 <p>I got the message as follows:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> namenodes on <span class="pp">[</span><span class="ss">master</span><span class="pp">]</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> master: rcmd: socket: Permission denied</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> datanodes</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.23: rcmd: socket: Permission denied</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.21: rcmd: socket: Permission denied</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.20: rcmd: socket: Permission denied</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> namenodes on <span class="pp">[</span><span class="ss">master</span><span class="pp">]</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> master: rcmd: socket: Permission denied</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> datanodes</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.23: rcmd: socket: Permission denied</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.21: rcmd: socket: Permission denied</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.20: rcmd: socket: Permission denied</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Please check in <code>workers</code>. The IP address was not set correctly.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="namenode-web-interface" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="namenode-web-interface"><span class="header-section-number">2.2</span> NameNode Web Interface</h2>
 <p>The web interface for the NameNode is available at <code>http://localhost:9870/</code> by default. If the <code>ufw</code> is enable, you should allow add <code>ufw</code> rule on port <code>9870</code></p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 9870</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 9870</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="navigate-hadoop-files" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="navigate-hadoop-files"><span class="header-section-number">2.3</span> Navigate Hadoop Files</h2>
 <p>I am currently working on Window system. Extraction with Winrar causes me some errors, thus I use Cygwin Linux Software to extract the file.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /cygdrive/c/users/Jorgnur/Downloads/hadoop-3.3.5.tar.gz</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cygwin =&gt; node0</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz ubuntu@192.168.1.109:~/</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.109</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.109:~/hadoop-3.3.5/etc/</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@node0</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co"># node0 =&gt; node1</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.110:~/</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.110</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.110:~/hadoop-3.3.5/etc/</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a><span class="co"># node0 =&gt; node2</span></span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.107:~/</span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.107</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.107:~/hadoop-3.3.5/etc/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="obtain-public-key-of-each" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="obtain-public-key-of-each"><span class="header-section-number">2.4</span> Obtain public key of each</h2>
+<p>Using <code>pdsh</code> and regular expression to retreive the rsa public key of each machine</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh</span> <span class="at">-w</span> node<span class="pp">[</span><span class="ss">1</span><span class="pp">-</span><span class="ss">2</span><span class="pp">]</span> cat ~/.ssh/id_rsa.pub <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/[^:]*: //'</span> <span class="op">&gt;&gt;</span> text.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="configuration-files" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="configuration-files"><span class="header-section-number">2.5</span> Configuration files</h2>
+<p>Hadoop’s Java configuration is driven by two types of important configuration files</p>
+<p>Read-only default configuration</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-project-dist\hadoop-common\core-default.xml</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-project-dist\hadoop-hdfs\hdfs-default.xml</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-yarn\hadoop-yarn-common\yarn-default.xml</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-mapreduce-client\hadoop-mapreduce-client-core\mapred-default.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Site-specific configuration</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/core-site.xml</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/hdfs-site.xml</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/yarn-site.xml</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/mapred-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>HDFS daemons are</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>NameNode</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>SecondaryNameNode</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>DataNode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>YARN daemons are</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>ResourceManager</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>NodeManager</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>WebAppProxy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="configuring-environment-of-hadoop-daemons" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="configuring-environment-of-hadoop-daemons"><span class="header-section-number">2.6</span> Configuring Environment of Hadoop Daemons</h2>
+<p>Administrators should use the</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/hadoop-env.sh</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/mapred-env.sh</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/yarn-env.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to do site-specific customization of the Hadoop daemons’ process environment.</p>
+<p>Do I need the specify the JAVA_HOME to all these <code>etc/hadoop/hadoop-env.sh etc/hadoop/mapred-env.sh etc/hadoop/yarn-env.sh</code> in Hadoop 3.3.5 ?</p>
 
 
 </section>

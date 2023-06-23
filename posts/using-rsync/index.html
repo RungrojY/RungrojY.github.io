@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rungroj Yadbantung">
-<meta name="dcterms.date" content="2023-06-20">
+<meta name="dcterms.date" content="2023-05-20">
 
 <title>RY - Using rsync in Linux</title>
 <style>
@@ -175,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 20, 2023</p>
+        <p class="date">May 20, 2023</p>
       </div>
     </div>
     
@@ -286,6 +286,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="using-rsync-with-pdsh">Using <code>rsync</code> with <code>pdsh</code></h3>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh</span> <span class="at">-w</span> ^hosts.txt rsync <span class="at">-avzphi</span> ~/aaa ubuntu@%:~/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh</span> <span class="at">-H</span> <span class="st">"</span><span class="va">$(</span><span class="fu">cat</span> hosts.txt <span class="kw">|</span> <span class="fu">tr</span> <span class="st">'\n'</span> <span class="st">','</span><span class="va">)</span><span class="st">"</span> <span class="st">"rsync -avzphi ~/aaa ubuntu@%:~/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># delete the files that contain `my-dir`</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*my-dir*"</span> <span class="at">-exec</span> rm {} <span class="dt">\;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-type</span> f <span class="at">-name</span> <span class="st">"*my-dir*"</span> <span class="at">-delete</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
