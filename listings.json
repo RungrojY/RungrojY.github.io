@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/hadoop-java-debugging/index.html",
       "/posts/using-hadoop/index.html",
       "/posts/setup-hadoop-cluster/index.html",
       "/posts/nextjs-redux/index.html",

@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to Runroj Yadbantung’s memos",
     "section": "",
-    "text": "Using Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster in Ubuntu Multipass\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+    "text": "Debugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster in Ubuntu Multipass\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/neo4j-in-nextjs/index.html",
@@ -1034,5 +1034,54 @@
     "title": "Using Hadoop",
     "section": "",
     "text": "start-yarn.sh\nResourceManager and NodeManager will show up\nubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ jps\n14357 SecondaryNameNode\n13943 NameNode\n14135 DataNode\n14569 Jps\nubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ start-yarn.sh\nStarting resourcemanager\nStarting nodemanagers\nubuntu@node0:~/hadoop-3.3.5/etc/hadoop$ jps\n14833 NodeManager\n14357 SecondaryNameNode\n13943 NameNode\n14135 DataNode\n15145 Jps\n14652 ResourceManager\nubuntu@node0:~/hadoop-3.3.5/etc/hadoop$\nBrowse the web interface for the ResourceManager\nhttp://localhost:8088\nhadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar grep input output 'dfs[a-z.]+'"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html",
+    "href": "posts/hadoop-java-debugging/index.html",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "Count all words in files\n\n\nAssume that you have already installed these softwares:\n\nJava (on the Server)\nHadoop (on the Server installed in Standalone Operation)\nCgywin (Optional for the Clients)\n\nThe overall files in this example are shown here. \n\n\n\n\n\nWordCount.java\n\nimport java.io.IOException;\nimport org.apache.hadoop.conf.Configuration;\nimport org.apache.hadoop.fs.Path;\nimport org.apache.hadoop.io.*;\nimport org.apache.hadoop.mapreduce.*;\nimport org.apache.hadoop.mapreduce.lib.input.FileInputFormat;\nimport org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;\n\npublic class WordCount {\n\n  public static class Map extends Mapper&lt;LongWritable, Text, Text, IntWritable&gt; {\n    private final static IntWritable one = new IntWritable(1);\n    private Text word = new Text();\n\n    public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {\n      String line = value.toString();\n      String[] words = line.split(\" \");\n\n      for (String word : words) {\n        this.word.set(word);\n        context.write(this.word, one);\n      }\n    }\n  }\n\n  public static class Reduce extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt; {\n    public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context) throws IOException, InterruptedException {\n      int sum = 0;\n      for (IntWritable value : values) {\n        sum += value.get();\n      }\n      context.write(key, new IntWritable(sum));\n    }\n  }\n\n  public static void main(String[] args) throws Exception {\n    Configuration conf = new Configuration();\n    Job job = Job.getInstance(conf, \"wordcount\");\n\n    job.setJarByClass(WordCount.class);\n    job.setMapperClass(Map.class);\n    job.setReducerClass(Reduce.class);\n\n    job.setOutputKeyClass(Text.class);\n    job.setOutputValueClass(IntWritable.class);\n\n    FileInputFormat.addInputPath(job, new Path(args[0]));\n    FileOutputFormat.setOutputPath(job, new Path(args[1]));\n\n    System.exit(job.waitForCompletion(true) ? 0 : 1);\n  }\n}\n\n\n\n\n\n\ncompile-java.sh\n\n#!/bin/bash\necho \"==============================================\"\n\nHADOOP_HOME=\"/home/ubuntu/hadoop-3.3.5\"\n\n# Compile the Java program using the javac command:\njavac -cp \"$HADOOP_HOME/share/hadoop/common/hadoop-common-3.3.5.jar:\\\n$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.5.jar\" \\\nWordCount.java\n\n# Create a JAR file using the jar command:\njar cf WordCount.jar WordCount*.class\n\nls *.jar\n\n\n\n\n\n\nhadoop-process.sh\n\n#!/bin/bash\necho \"==============================================\"\n\nHADOOP_HOME=\"/home/ubuntu/hadoop-3.3.5\"\n\nif [ -d \"output\" ]; then\n    rm -r output\nfi\n\n$HADOOP_HOME/bin/hadoop jar WordCount.jar WordCount input output\n\necho \"==============================================\"\nls -l output\necho \"==============================================\"\ncat output/*\n\n\n\n\nCreate input folder that consists of\n\n\ntest.txt\n\nfish dog fish\n\nand\n\n\ntest2.txt\n\nfish dog fish\n\n\n\n\nRun all scripts\n\n\nrun.sh\n\n#!/bin/bash\n\nremote_ip=\"192.168.1.109\"\nfile_dir=\"example1\"\nfile_path=\"/cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/$file_dir\"\ndest_path=\"~/\"\n\nrsync -avzphi \"$file_path\" \"ubuntu@$remote_ip:$dest_path\"\n\nssh ubuntu@$remote_ip \" \\\n    cd $dest_path$file_dir && \\\n    ./compile-java.sh && \\\n    ./hadoop-process.sh\n\"\n\nWe can run the script by typing ./run.sh\n\n\n\npic.2 Running the script\n\n\nThen, we can obtain 2 words of dogs and 4 words of fish.\n\n\n\npic.3 Resuts"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#word-count-in-java-code",
+    "href": "posts/hadoop-java-debugging/index.html#word-count-in-java-code",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "WordCount.java\n\nimport java.io.IOException;\nimport org.apache.hadoop.conf.Configuration;\nimport org.apache.hadoop.fs.Path;\nimport org.apache.hadoop.io.*;\nimport org.apache.hadoop.mapreduce.*;\nimport org.apache.hadoop.mapreduce.lib.input.FileInputFormat;\nimport org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;\n\npublic class WordCount {\n\n  public static class Map extends Mapper&lt;LongWritable, Text, Text, IntWritable&gt; {\n    private final static IntWritable one = new IntWritable(1);\n    private Text word = new Text();\n\n    public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {\n      String line = value.toString();\n      String[] words = line.split(\" \");\n\n      for (String word : words) {\n        this.word.set(word);\n        context.write(this.word, one);\n      }\n    }\n  }\n\n  public static class Reduce extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt; {\n    public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context) throws IOException, InterruptedException {\n      int sum = 0;\n      for (IntWritable value : values) {\n        sum += value.get();\n      }\n      context.write(key, new IntWritable(sum));\n    }\n  }\n\n  public static void main(String[] args) throws Exception {\n    Configuration conf = new Configuration();\n    Job job = Job.getInstance(conf, \"wordcount\");\n\n    job.setJarByClass(WordCount.class);\n    job.setMapperClass(Map.class);\n    job.setReducerClass(Reduce.class);\n\n    job.setOutputKeyClass(Text.class);\n    job.setOutputValueClass(IntWritable.class);\n\n    FileInputFormat.addInputPath(job, new Path(args[0]));\n    FileOutputFormat.setOutputPath(job, new Path(args[1]));\n\n    System.exit(job.waitForCompletion(true) ? 0 : 1);\n  }\n}"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#compile-java-into-jar",
+    "href": "posts/hadoop-java-debugging/index.html#compile-java-into-jar",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "compile-java.sh\n\n#!/bin/bash\necho \"==============================================\"\n\nHADOOP_HOME=\"/home/ubuntu/hadoop-3.3.5\"\n\n# Compile the Java program using the javac command:\njavac -cp \"$HADOOP_HOME/share/hadoop/common/hadoop-common-3.3.5.jar:\\\n$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.5.jar\" \\\nWordCount.java\n\n# Create a JAR file using the jar command:\njar cf WordCount.jar WordCount*.class\n\nls *.jar"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#process-a-jar-file-in-hadoop",
+    "href": "posts/hadoop-java-debugging/index.html#process-a-jar-file-in-hadoop",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "hadoop-process.sh\n\n#!/bin/bash\necho \"==============================================\"\n\nHADOOP_HOME=\"/home/ubuntu/hadoop-3.3.5\"\n\nif [ -d \"output\" ]; then\n    rm -r output\nfi\n\n$HADOOP_HOME/bin/hadoop jar WordCount.jar WordCount input output\n\necho \"==============================================\"\nls -l output\necho \"==============================================\"\ncat output/*"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#create-input-files",
+    "href": "posts/hadoop-java-debugging/index.html#create-input-files",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "Create input folder that consists of\n\n\ntest.txt\n\nfish dog fish\n\nand\n\n\ntest2.txt\n\nfish dog fish"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#run-all-scripts",
+    "href": "posts/hadoop-java-debugging/index.html#run-all-scripts",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "Run all scripts\n\n\nrun.sh\n\n#!/bin/bash\n\nremote_ip=\"192.168.1.109\"\nfile_dir=\"example1\"\nfile_path=\"/cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/$file_dir\"\ndest_path=\"~/\"\n\nrsync -avzphi \"$file_path\" \"ubuntu@$remote_ip:$dest_path\"\n\nssh ubuntu@$remote_ip \" \\\n    cd $dest_path$file_dir && \\\n    ./compile-java.sh && \\\n    ./hadoop-process.sh\n\"\n\nWe can run the script by typing ./run.sh\n\n\n\npic.2 Running the script\n\n\nThen, we can obtain 2 words of dogs and 4 words of fish.\n\n\n\npic.3 Resuts"
+  },
+  {
+    "objectID": "posts/hadoop-java-debugging/index.html#prerequisites",
+    "href": "posts/hadoop-java-debugging/index.html#prerequisites",
+    "title": "Debugging a Hadoop Java Code",
+    "section": "",
+    "text": "Assume that you have already installed these softwares:\n\nJava (on the Server)\nHadoop (on the Server installed in Standalone Operation)\nCgywin (Optional for the Clients)\n\nThe overall files in this example are shown here."
   }
 ]
