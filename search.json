@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to Runroj Yadbantung’s memos",
     "section": "",
-    "text": "Debugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster in Ubuntu Multipass\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+    "text": "Debugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/neo4j-in-nextjs/index.html",
@@ -415,9 +415,9 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html",
     "href": "posts/setup-hadoop-cluster/index.html",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Create Ubuntu Server image with yaml file.\n\n\n\nhostname\nrole\n\n\n\n\nnode0\nnamenode\n\n\nnode1\ndatanode\n\n\nnode2\ndatanode\n\n\n\n\n\nsetup-ubuntu.yaml\n\npackage_update: true\npackage_upgrade: true\npackages:\n  - openjdk-8-jdk\n  - ssh\n\n\n\nWindow Terminal\n\n# the default resources are 1 CPU cores, ~1 GB memory and ~5 GB disk space.\nmultipass launch --name node0 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml focal\n# or add more resources with the command\nmultipass launch -n node0 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 4G focal\nmultipass launch -n node1 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 2G focal\nmultipass launch -n node2 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 2G focal\n\nThe word focal refers to Ubuntu 20.04 LTS. The IP addresses are obtain as\n\n\n\nhostname\nrole\nIP address\n\n\n\n\nnode0\nnamenode\n192.168.1.127\n\n\nnode1\ndatanode\n192.168.1.128\n\n\nnode2\ndatanode\n192.168.1.129\n\n\n\n\n\n\nGenerate ssh key pairs for each machine.\nssh-keygen\n# or\nssh-keygen -t rsa\ncd .ssh\nvi authorized_keys\nThe original public key should also be added for multipass shell command.\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHf4pMDm06FEWOXMmveyNTJw75+iVM30sz6iYQHLmD8DSGrrkfiKHsXxVGRJxB2A+V72AaoJFJ6CwSi4TVManNLHt8v1ropos45ST0JTTwrjlK6hc4Z68P5l0M4C6sZIEIYECWoA1VTuUzmH4d0szyNDCM+2qkwnWzYnfxbiESkExqgyNnfXw+YlvvPEioyNL8mxq4iPJCJ8HnPKVaAgQFwqJ4c4Zu6P4FZlFsuJHHkdcDdoDRSorqFr7LK7Ye0dfSrqcF39GQBvIZkcLhg1IUxLcPaaDvNXuU0r2N7j63/elVXpmYGolDgyz7HS0Ymr1fdr+bD3lO0fj+RMx9ANFn ubuntu@localhost\nThus, we need to add these public keys for each machine.\nssh-rsa AAAAB...NFn ubuntu@localhost\nssh-rsa AAAAB...Hns= ubuntu@node0\nssh-rsa AAAAB...1tE= ubuntu@node1\nssh-rsa AAAAB...AS0= ubuntu@node2\n\n\n\nIn order to call the IP address, we can replace the IP addresses as their short name.\nvi /etc/hosts\n192.168.1.127 node0\n192.168.1.128 node1\n192.168.1.129 node2\n\n\n\nFor executing shell commands in parallel across multiple remote machines, let’s install pdsh and it is required for Hadoop setup\nsudo apt-get install pdsh\n\n# Display output version information with\npdsh -V\nPlease change the type of shell protocol to be ssh, otherwise it’s cause an error for Hadoop.\nvi ~/.bashrc\n\n\n.bashrc\n\nexport PDSH_RCMD_TYPE=ssh\n\nBy testing with the following command, the hostname must be show up.\npdsh -w node[0-2] hostname\nor testing with the text file.\nvi hosts.txt\nSet all IP address of machine nodes\n\n\nhosts.txt\n\n192.168.1.127\n192.168.1.128\n192.168.1.129\n\npdsh -w ^hosts.txt hostname\n\n\n\nLet’s visit released page and download hadoop-3.3.5.tar.gz in Window\n\n\nWindow Terminal\n\nmultipass transfer C:\\Users\\Jorgnur\\Downloads\\hadoop-3.3.5.tar.gz node0:/home/ubuntu/\n\nIn Ubuntu, unpacking the software on all the machines in the cluster\ntar -zxvf ~/Downloads/hadoop-3.3.5.tar.gz \n\n\n\nEdit .bashrc with\nvi ~/.bashrc\nexport JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64\nexport PATH=$PATH:$JAVA_HOME/bin\nexport HADOOP_HOME=~/hadoop-3.3.5\nexport PATH=$PATH:$HADOOP_HOME/bin\nexport PATH=$PATH:$HADOOP_HOME/sbin\nreload bash file\nsource ~/.bashrc\n# or\n. ~/.bashrc\n\n# check the result with\necho $PATH\n\n\n\nLet’s add JAVA_HOME to flies located in ~/hadoop-3.3.5/etc/hadoop which are\n\n\n\nfilename\n\n\n\n\nmapred-env.sh\n\n\nhadoop-env.sh\n\n\nyarn-env.sh\n\n\n\ncd ~/hadoop-3.3.5/etc/hadoop\n\n# see file list in details\nls -lstr\nls -lstr *env*.sh\nOpen three files with the following commands\nvi ~/hadoop-3.3.5/etc/hadoop/mapred-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/hadoop-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/yarn-env.sh\nand add JAVA_HOME below to all files.\nexport JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/core-site.xml\n&lt;!-- Set master node --&gt;\n&lt;property&gt;\n  &lt;name&gt;fs.default.name&lt;/name&gt;\n  &lt;value&gt;hdfs://192.168.1.127:50000&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; &lt;value&gt;mapreduce_shuffle&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt; \n  &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;description&gt;The hostname of the RM.&lt;/description&gt;\n  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;\n  &lt;value&gt;192.168.1.127&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;description&gt;The address of the applications manager interface in the RM.&lt;/description&gt;\n  &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;\n  &lt;value&gt;192.168.1.127:8032&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml\n&lt;property&gt;\n  &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/namenode-dir&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/datanode-dir&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml\n&lt;property&gt;\n  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;\n  &lt;value&gt;yarn&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/workers\n192.168.1.127\n192.168.1.128\n192.168.1.129\n\n\n\nLet’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.\ncd ~/hadoop-3.3.5\nbin/hdfs namenode -format\n# or (deprecated)\nbin/hadoop namenode -format\n\n\n\n\n\ncd ~/hadoop-3.3.5\nsbin/start-all.sh\n\n\n\ncd ~/hadoop-3.3.5\nsbin/stop-all.sh\n\n\n\njps\n\n\n\n\nLet’s go the browser http://localhost:9870/ of the Namenode, thus it is 192.168.1.120:9870 for in this case.\n\n\n\nvi ~/demo\n\n\ndemo\n\nHello!\n\ncd ~/hadoop-3.3.5\nbin/hadoop dfs -put /home/ubuntu/demo /demo123\n# or\nbin/hdfs dfs -put /home/ubuntu/demo /demo123"
+    "text": "For example, I will use Ubuntu Server 20.04.6 in this setup. Install it in Virtual Box and don’t forget to install ssh I have set CPU 2 cors, Memory 4 GB and Space 25 GB. By default, the network is set as NAT, so that the VM can use internet.\n\n\n\nInstall java version 8 for Hadoop. This is the required java version.\nsudo apt update\nsudo apt install openjdk-8-jdk\nThe next is to set the variables to ~/.bashrc. To add a literal string to the ~/.bashrc file in Ubuntu, you can use the echo command with single quotes to prevent variable expansion.\necho 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' &gt;&gt; ~/.bashrc\necho 'export PATH=$JAVA_HOME/bin:$PATH' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $JAVA_HOME\nUsing single quotes (') ensures that the string is treated as a literal and preserves the $PATH variable for future evaluation when the .bashrc file is sourced.\n\n\n\nLet’s visit released page and download hadoop-3.3.5.tar.gz or using the following command.\nwget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz\nExtract the file with the command:\ntar -zxvf hadoop-3.3.5.tar.gz\n# remove a tar file\nrm hadoop-3.3.5.tar.gz\nIn order to run the Hadoop command without specifying the directory, let add the variables. Assume that the directory of hadoop is /home/ubuntu/hadoop-3.3.5, you can use:\necho 'export HADOOP_HOME=/home/ubuntu/hadoop-3.3.5' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$HADOOP_HOME/bin' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$HADOOP_HOME/sbin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $HADOOP_HOME\n\n\n\nLet’s add JAVA_HOME to flies located in ~/hadoop-3.3.5/etc/hadoop which are\n\n\n\nfilename\n\n\n\n\nmapred-env.sh\n\n\nhadoop-env.sh\n\n\nyarn-env.sh\n\n\n\ncd ~/hadoop-3.3.5/etc/hadoop\n\n# see file list in details\nls -lstr\nls -lstr *env*.sh\nOpen three files with the following commands\nvi ~/hadoop-3.3.5/etc/hadoop/mapred-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/hadoop-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/yarn-env.sh\nand add JAVA_HOME below to all files.\nexport JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64\n\n\n\nIn the this configuration, you need to have the IP address of a VM. You can add the second network as host-only adapter in Virtual Box of the machine to obtain the IP address.\nvi ~/hadoop-3.3.5/etc/hadoop/core-site.xml\nLet the machine with a IP address 192.168.1.127 be the namenode. Paste the following code in &lt;configuration&gt;...&lt;/configuration&gt;\n&lt;property&gt;\n  &lt;name&gt;fs.defaultFS&lt;/name&gt;\n  &lt;value&gt;hdfs://192.168.1.127:9000&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml\nBy default, data replication is 3, thus add the property dfs.replication to define more or less. Then, define the location to store hdfs files of namenode and datanode\n&lt;property&gt;\n  &lt;name&gt;dfs.replication&lt;/name&gt;\n  &lt;value&gt;2&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/namenode&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/datanode&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml\nTell Hadoop to use yarn to manage mapreduce.\n&lt;property&gt;\n  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;\n  &lt;value&gt;yarn&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nvi ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; \n  &lt;value&gt;mapreduce_shuffle&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;\n  &lt;value&gt;192.168.1.127&lt;/value&gt;\n&lt;/property&gt;\n\n\n\nClone virtual machine and change the files /etc/hostname and /etc/hosts to replace the word of the original VM, then reboot the system.\n\n\n\nhostname\nassigned role\nIP address\n\n\n\n\nnode0\nnamenode\n192.168.1.127\n\n\nnode1\ndatanode\n192.168.1.128\n\n\nnode2\ndatanode\n192.168.1.129\n\n\n\n\n\n\nGenerate ssh key pairs for each machine.\nssh-keygen\n# or\nssh-keygen -t rsa\ncd .ssh\nvi authorized_keys\nThis public key is of local host for connecting to each VM. It should also be added.\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHf4pMDm06FEWOXMmveyNTJw75+iVM30sz6iYQHLmD8DSGrrkfiKHsXxVGRJxB2A+V72AaoJFJ6CwSi4TVManNLHt8v1ropos45ST0JTTwrjlK6hc4Z68P5l0M4C6sZIEIYECWoA1VTuUzmH4d0szyNDCM+2qkwnWzYnfxbiESkExqgyNnfXw+YlvvPEioyNL8mxq4iPJCJ8HnPKVaAgQFwqJ4c4Zu6P4FZlFsuJHHkdcDdoDRSorqFr7LK7Ye0dfSrqcF39GQBvIZkcLhg1IUxLcPaaDvNXuU0r2N7j63/elVXpmYGolDgyz7HS0Ymr1fdr+bD3lO0fj+RMx9ANFn ubuntu@localhost\nThus, we need to add these public keys for each machine.\nssh-rsa AAAAB...NFn ubuntu@localhost\nssh-rsa AAAAB...Hns= ubuntu@node0\nssh-rsa AAAAB...1tE= ubuntu@node1\nssh-rsa AAAAB...AS0= ubuntu@node2\n\n\n\nIn namenode, it might need declare hostname of workers (datanode).\nvi /etc/hosts\n192.168.1.128 node1\n192.168.1.129 node2\nSet workers IP address only in namenode.\nvi ~/hadoop-3.3.5/etc/hadoop/workers\n192.168.1.128\n192.168.1.129\n\n\n\n\nIn namenode, let’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.\ncd ~/hadoop-3.3.5\nbin/hdfs namenode -format\n\n\n\n\n\nstart-dfs.sh\nstart-yarn.sh\n\n\n\nstop-dfs.sh\nstop-yarn.sh\n\n\n\njps\n\n\n\n\nLet’s go the browser HDFS http://localhost:9870/ and ResourceManager - http://localhost:8088/ of the Namenode, thus access with http://192.168.1.127:9870/ from outside a VM.\n\n\n\nvi ~/demo\n\n\ndemo\n\nHello!\n\nhdfs dfs -put /home/ubuntu/demo /demo123"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#create-virtual-machine-with-yaml",
@@ -436,9 +436,9 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#create-virtual-machine",
     "href": "posts/setup-hadoop-cluster/index.html#create-virtual-machine",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Create Ubuntu Server image with yaml file.\n\n\n\nhostname\nrole\n\n\n\n\nnode0\nnamenode\n\n\nnode1\ndatanode\n\n\nnode2\ndatanode\n\n\n\n\n\nsetup-ubuntu.yaml\n\npackage_update: true\npackage_upgrade: true\npackages:\n  - openjdk-8-jdk\n  - ssh\n\n\n\nWindow Terminal\n\n# the default resources are 1 CPU cores, ~1 GB memory and ~5 GB disk space.\nmultipass launch --name node0 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml focal\n# or add more resources with the command\nmultipass launch -n node0 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 4G focal\nmultipass launch -n node1 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 2G focal\nmultipass launch -n node2 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 1 -d 10G -m 2G focal\n\nThe word focal refers to Ubuntu 20.04 LTS. The IP addresses are obtain as\n\n\n\nhostname\nrole\nIP address\n\n\n\n\nnode0\nnamenode\n192.168.1.127\n\n\nnode1\ndatanode\n192.168.1.128\n\n\nnode2\ndatanode\n192.168.1.129"
+    "text": "Create Ubuntu Server image with yaml file.\n\n\n\nhostname\nrole\n\n\n\n\nnode0\nnamenode\n\n\nnode1\ndatanode\n\n\nnode2\ndatanode\n\n\n\n\n\nsetup-ubuntu.yaml\n\npackage_update: true\npackage_upgrade: true\npackages:\n  - openjdk-8-jdk\n  - ssh\n\n\n\nWindow Terminal\n\n# the default resources are 1 CPU cores, ~1 GB memory and ~5 GB disk space.\nmultipass launch --name node0 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml focal\n# or add more resources with the command\nmultipass launch -n hn1 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 2 -d 20G -m 4G focal\nmultipass launch -n hn2 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 2 -d 20G -m 4G focal\nmultipass launch -n hn3 --network Wi-Fi --cloud-init C:\\Users\\Jorgnur\\Desktop\\Clound\\multipass\\setup-ubuntu.yaml -c 2 -d 20G -m 4G focal\n\nThe word focal refers to Ubuntu 20.04 LTS. The IP addresses are obtain as\n\n\n\nhostname\nrole\nIP address\n\n\n\n\nnode0\nnamenode\n192.168.1.127\n\n\nnode1\ndatanode\n192.168.1.128\n\n\nnode2\ndatanode\n192.168.1.129"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#install-pdsh-parallel-distributed-shell-in-hadoop0",
@@ -450,70 +450,70 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#prepare-the-file",
     "href": "posts/setup-hadoop-cluster/index.html#prepare-the-file",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Let’s visit released page and download hadoop-3.3.5.tar.gz in Window\n\n\nWindow Terminal\n\nmultipass transfer C:\\Users\\Jorgnur\\Downloads\\hadoop-3.3.5.tar.gz node0:/home/ubuntu/\n\nIn Ubuntu, unpacking the software on all the machines in the cluster\ntar -zxvf ~/Downloads/hadoop-3.3.5.tar.gz"
+    "text": "Window Terminal\n\nmultipass transfer C:\\Users\\Jorgnur\\Downloads\\hadoop-3.3.5.tar.gz node0:/home/ubuntu/\n\nIn Ubuntu, unpacking the software on all the machines in the cluster\ntar -zxvf ~/Downloads/hadoop-3.3.5.tar.gz"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#generate-rsa-key-pairs",
     "href": "posts/setup-hadoop-cluster/index.html#generate-rsa-key-pairs",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Generate ssh key pairs for each machine.\nssh-keygen\n# or\nssh-keygen -t rsa\ncd .ssh\nvi authorized_keys\nThe original public key should also be added for multipass shell command.\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHf4pMDm06FEWOXMmveyNTJw75+iVM30sz6iYQHLmD8DSGrrkfiKHsXxVGRJxB2A+V72AaoJFJ6CwSi4TVManNLHt8v1ropos45ST0JTTwrjlK6hc4Z68P5l0M4C6sZIEIYECWoA1VTuUzmH4d0szyNDCM+2qkwnWzYnfxbiESkExqgyNnfXw+YlvvPEioyNL8mxq4iPJCJ8HnPKVaAgQFwqJ4c4Zu6P4FZlFsuJHHkdcDdoDRSorqFr7LK7Ye0dfSrqcF39GQBvIZkcLhg1IUxLcPaaDvNXuU0r2N7j63/elVXpmYGolDgyz7HS0Ymr1fdr+bD3lO0fj+RMx9ANFn ubuntu@localhost\nThus, we need to add these public keys for each machine.\nssh-rsa AAAAB...NFn ubuntu@localhost\nssh-rsa AAAAB...Hns= ubuntu@node0\nssh-rsa AAAAB...1tE= ubuntu@node1\nssh-rsa AAAAB...AS0= ubuntu@node2"
+    "text": "Generate ssh key pairs for each machine.\nssh-keygen\n# or\nssh-keygen -t rsa\ncd .ssh\nvi authorized_keys\nThis public key is of local host for connecting to each VM. It should also be added.\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHf4pMDm06FEWOXMmveyNTJw75+iVM30sz6iYQHLmD8DSGrrkfiKHsXxVGRJxB2A+V72AaoJFJ6CwSi4TVManNLHt8v1ropos45ST0JTTwrjlK6hc4Z68P5l0M4C6sZIEIYECWoA1VTuUzmH4d0szyNDCM+2qkwnWzYnfxbiESkExqgyNnfXw+YlvvPEioyNL8mxq4iPJCJ8HnPKVaAgQFwqJ4c4Zu6P4FZlFsuJHHkdcDdoDRSorqFr7LK7Ye0dfSrqcF39GQBvIZkcLhg1IUxLcPaaDvNXuU0r2N7j63/elVXpmYGolDgyz7HS0Ymr1fdr+bD3lO0fj+RMx9ANFn ubuntu@localhost\nThus, we need to add these public keys for each machine.\nssh-rsa AAAAB...NFn ubuntu@localhost\nssh-rsa AAAAB...Hns= ubuntu@node0\nssh-rsa AAAAB...1tE= ubuntu@node1\nssh-rsa AAAAB...AS0= ubuntu@node2"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#replace-ip-address-with-its-names",
     "href": "posts/setup-hadoop-cluster/index.html#replace-ip-address-with-its-names",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "In order to call the IP address, we can replace the IP addresses as their short name.\nvi /etc/hosts\n192.168.1.127 node0\n192.168.1.128 node1\n192.168.1.129 node2"
+    "text": "In namenode, it might need declare hostname of workers (datanode).\nvi /etc/hosts\n192.168.1.128 node1\n192.168.1.129 node2"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#setup-.bashrc",
     "href": "posts/setup-hadoop-cluster/index.html#setup-.bashrc",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
     "text": "Edit .bashrc with\nvi ~/.bashrc\nexport JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64\nexport PATH=$PATH:$JAVA_HOME/bin\nexport HADOOP_HOME=~/hadoop-3.3.5\nexport PATH=$PATH:$HADOOP_HOME/bin\nexport PATH=$PATH:$HADOOP_HOME/sbin\nreload bash file\nsource ~/.bashrc\n# or\n. ~/.bashrc\n\n# check the result with\necho $PATH"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#hadoop-configuration",
     "href": "posts/setup-hadoop-cluster/index.html#hadoop-configuration",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
     "text": "Let’s add JAVA_HOME to flies located in ~/hadoop-3.3.5/etc/hadoop which are\n\n\n\nfilename\n\n\n\n\nmapred-env.sh\n\n\nhadoop-env.sh\n\n\nyarn-env.sh\n\n\n\ncd ~/hadoop-3.3.5/etc/hadoop\n\n# see file list in details\nls -lstr\nls -lstr *env*.sh\nOpen three files with the following commands\nvi ~/hadoop-3.3.5/etc/hadoop/mapred-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/hadoop-env.sh\nvi ~/hadoop-3.3.5/etc/hadoop/yarn-env.sh\nand add JAVA_HOME below to all files.\nexport JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configure-core-site.xml",
     "href": "posts/setup-hadoop-cluster/index.html#configure-core-site.xml",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "vi ~/hadoop-3.3.5/etc/hadoop/core-site.xml\n&lt;!-- Set master node --&gt;\n&lt;property&gt;\n  &lt;name&gt;fs.default.name&lt;/name&gt;\n  &lt;value&gt;hdfs://192.168.1.127:50000&lt;/value&gt;\n&lt;/property&gt;"
+    "text": "In the this configuration, you need to have the IP address of a VM. You can add the second network as host-only adapter in Virtual Box of the machine to obtain the IP address.\nvi ~/hadoop-3.3.5/etc/hadoop/core-site.xml\nLet the machine with a IP address 192.168.1.127 be the namenode. Paste the following code in &lt;configuration&gt;...&lt;/configuration&gt;\n&lt;property&gt;\n  &lt;name&gt;fs.defaultFS&lt;/name&gt;\n  &lt;value&gt;hdfs://192.168.1.127:9000&lt;/value&gt;\n&lt;/property&gt;"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configure-yarn-site.xml",
     "href": "posts/setup-hadoop-cluster/index.html#configure-yarn-site.xml",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "vi ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; &lt;value&gt;mapreduce_shuffle&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt; \n  &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;description&gt;The hostname of the RM.&lt;/description&gt;\n  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;\n  &lt;value&gt;192.168.1.127&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;description&gt;The address of the applications manager interface in the RM.&lt;/description&gt;\n  &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;\n  &lt;value&gt;192.168.1.127:8032&lt;/value&gt;\n&lt;/property&gt;"
+    "text": "vi ~/hadoop-3.3.5/etc/hadoop/yarn-site.xml\n&lt;property&gt;\n  &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; \n  &lt;value&gt;mapreduce_shuffle&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;\n  &lt;value&gt;192.168.1.127&lt;/value&gt;\n&lt;/property&gt;"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configure-hdfs-site.xml",
     "href": "posts/setup-hadoop-cluster/index.html#configure-hdfs-site.xml",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "vi ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml\n&lt;property&gt;\n  &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/namenode-dir&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/datanode-dir&lt;/value&gt;\n&lt;/property&gt;"
+    "text": "vi ~/hadoop-3.3.5/etc/hadoop/hdfs-site.xml\nBy default, data replication is 3, thus add the property dfs.replication to define more or less. Then, define the location to store hdfs files of namenode and datanode\n&lt;property&gt;\n  &lt;name&gt;dfs.replication&lt;/name&gt;\n  &lt;value&gt;2&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/namenode&lt;/value&gt;\n&lt;/property&gt;\n\n&lt;property&gt;\n  &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;\n  &lt;value&gt;/home/ubuntu/hadoop-data/datanode&lt;/value&gt;\n&lt;/property&gt;"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configure-mapred-site.xml",
     "href": "posts/setup-hadoop-cluster/index.html#configure-mapred-site.xml",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "vi ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml\n&lt;property&gt;\n  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;\n  &lt;value&gt;yarn&lt;/value&gt;\n&lt;/property&gt;"
+    "text": "vi ~/hadoop-3.3.5/etc/hadoop/mapred-site.xml\nTell Hadoop to use yarn to manage mapreduce.\n&lt;property&gt;\n  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;\n  &lt;value&gt;yarn&lt;/value&gt;\n&lt;/property&gt;"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#set-workers-ip-address-only-in-master-node",
     "href": "posts/setup-hadoop-cluster/index.html#set-workers-ip-address-only-in-master-node",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
     "text": "vi ~/hadoop-3.3.5/etc/hadoop/workers\n192.168.1.127\n192.168.1.128\n192.168.1.129"
   },
@@ -527,30 +527,30 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#general-usage-command",
     "href": "posts/setup-hadoop-cluster/index.html#general-usage-command",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
     "text": "cd ~/hadoop-3.3.5\nsbin/start-all.sh\n\n\n\ncd ~/hadoop-3.3.5\nsbin/stop-all.sh\n\n\n\njps"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#hadoop-ui",
     "href": "posts/setup-hadoop-cluster/index.html#hadoop-ui",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Let’s go the browser http://localhost:9870/ of the Namenode, thus it is 192.168.1.120:9870 for in this case."
+    "text": "Let’s go the browser http://localhost:9870/ of the Namenode, thus access with http://192.168.1.127:9870/ from outside a VM."
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#format-hdfs-namenode",
     "href": "posts/setup-hadoop-cluster/index.html#format-hdfs-namenode",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "Let’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.\ncd ~/hadoop-3.3.5\nbin/hdfs namenode -format\n# or (deprecated)\nbin/hadoop namenode -format"
+    "text": "In namenode, let’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.\ncd ~/hadoop-3.3.5\nbin/hdfs namenode -format"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#create-a-demo-file",
     "href": "posts/setup-hadoop-cluster/index.html#create-a-demo-file",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
-    "text": "vi ~/demo\n\n\ndemo\n\nHello!\n\ncd ~/hadoop-3.3.5\nbin/hadoop dfs -put /home/ubuntu/demo /demo123\n# or\nbin/hdfs dfs -put /home/ubuntu/demo /demo123"
+    "text": "vi ~/demo\n\n\ndemo\n\nHello!\n\nhdfs dfs -put /home/ubuntu/demo /demo123"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#troubleshoots",
@@ -569,14 +569,14 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#namenode-web-interface",
     "href": "posts/setup-hadoop-cluster/index.html#namenode-web-interface",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.2 NameNode Web Interface",
     "text": "2.2 NameNode Web Interface\nThe web interface for the NameNode is available at http://localhost:9870/ by default. If the ufw is enable, you should allow add ufw rule on port 9870\nsudo ufw allow 9870\nsudo ufw reload"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#permission-denied",
     "href": "posts/setup-hadoop-cluster/index.html#permission-denied",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.1 Permission denied",
     "text": "2.1 Permission denied\nI got the message as follows:\nStopping namenodes on [master]\npdsh@node0: master: rcmd: socket: Permission denied\nStopping datanodes\npdsh@node0: 192.168.1.23: rcmd: socket: Permission denied\npdsh@node0: 192.168.1.21: rcmd: socket: Permission denied\npdsh@node0: 192.168.1.20: rcmd: socket: Permission denied\nPlease check in workers. The IP address was not set correctly.\nvi ~/hadoop-3.3.5/etc/hadoop/workers"
   },
@@ -590,14 +590,14 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#install-pdsh-parallel-distributed-shell-in-node0",
     "href": "posts/setup-hadoop-cluster/index.html#install-pdsh-parallel-distributed-shell-in-node0",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "",
     "text": "For executing shell commands in parallel across multiple remote machines, let’s install pdsh and it is required for Hadoop setup\nsudo apt-get install pdsh\n\n# Display output version information with\npdsh -V\nPlease change the type of shell protocol to be ssh, otherwise it’s cause an error for Hadoop.\nvi ~/.bashrc\n\n\n.bashrc\n\nexport PDSH_RCMD_TYPE=ssh\n\nBy testing with the following command, the hostname must be show up.\npdsh -w node[0-2] hostname\nor testing with the text file.\nvi hosts.txt\nSet all IP address of machine nodes\n\n\nhosts.txt\n\n192.168.1.127\n192.168.1.128\n192.168.1.129\n\npdsh -w ^hosts.txt hostname"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#navigate-hadoop-files",
     "href": "posts/setup-hadoop-cluster/index.html#navigate-hadoop-files",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.3 Navigate Hadoop Files",
     "text": "2.3 Navigate Hadoop Files\nI am currently working on Window system. Extraction with Winrar causes me some errors, thus I use Cygwin Linux Software to extract the file.\ncd /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz\ntar -zxvf hadoop-3.3.5.tar.gz\n# cygwin =&gt; node0\nrsync -avzphi /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz ubuntu@192.168.1.109:~/\nssh ubuntu@192.168.1.109\ntar -zxvf hadoop-3.3.5.tar.gz\nrm hadoop-3.3.5.tar.gz\nlogout\nrsync -avzphi /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.109:~/hadoop-3.3.5/etc/\n\nssh ubuntu@node0\n# node0 =&gt; node1\nrsync -avzphi ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.110:~/\nssh ubuntu@192.168.1.110\ntar -zxvf hadoop-3.3.5.tar.gz\nrm hadoop-3.3.5.tar.gz\nlogout\nrsync -avzphi ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.110:~/hadoop-3.3.5/etc/\n\n# node0 =&gt; node2\nrsync -avzphi ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.107:~/\nssh ubuntu@192.168.1.107\ntar -zxvf hadoop-3.3.5.tar.gz\nrm hadoop-3.3.5.tar.gz\nlogout\nrsync -avzphi ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.107:~/hadoop-3.3.5/etc/"
   },
@@ -982,7 +982,7 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#obtain-public-key-of-each",
     "href": "posts/setup-hadoop-cluster/index.html#obtain-public-key-of-each",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.4 Obtain public key of each",
     "text": "2.4 Obtain public key of each\nUsing pdsh and regular expression to retreive the rsa public key of each machine\npdsh -w node[1-2] cat ~/.ssh/id_rsa.pub | sed 's/[^:]*: //' &gt;&gt; text.txt"
   },
@@ -1003,14 +1003,14 @@
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configuration-files",
     "href": "posts/setup-hadoop-cluster/index.html#configuration-files",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.5 Configuration files",
     "text": "2.5 Configuration files\nHadoop’s Java configuration is driven by two types of important configuration files\nRead-only default configuration\nhadoop-3.3.5\\share\\doc\\hadoop\\hadoop-project-dist\\hadoop-common\\core-default.xml\nhadoop-3.3.5\\share\\doc\\hadoop\\hadoop-project-dist\\hadoop-hdfs\\hdfs-default.xml\nhadoop-3.3.5\\share\\doc\\hadoop\\hadoop-yarn\\hadoop-yarn-common\\yarn-default.xml\nhadoop-3.3.5\\share\\doc\\hadoop\\hadoop-mapreduce-client\\hadoop-mapreduce-client-core\\mapred-default.xml\nSite-specific configuration\nhadoop-3.3.5/etc/hadoop/core-site.xml\nhadoop-3.3.5/etc/hadoop/hdfs-site.xml\nhadoop-3.3.5/etc/hadoop/yarn-site.xml\nhadoop-3.3.5/etc/hadoop/mapred-site.xml\nHDFS daemons are\nNameNode\nSecondaryNameNode\nDataNode\nYARN daemons are\nResourceManager\nNodeManager\nWebAppProxy"
   },
   {
     "objectID": "posts/setup-hadoop-cluster/index.html#configuring-environment-of-hadoop-daemons",
     "href": "posts/setup-hadoop-cluster/index.html#configuring-environment-of-hadoop-daemons",
-    "title": "Setup Hadoop Cluster in Ubuntu Multipass",
+    "title": "Setup Hadoop Cluster",
     "section": "2.6 Configuring Environment of Hadoop Daemons",
     "text": "2.6 Configuring Environment of Hadoop Daemons\nAdministrators should use the\netc/hadoop/hadoop-env.sh\netc/hadoop/mapred-env.sh\netc/hadoop/yarn-env.sh\nto do site-specific customization of the Hadoop daemons’ process environment.\nDo I need the specify the JAVA_HOME to all these etc/hadoop/hadoop-env.sh etc/hadoop/mapred-env.sh etc/hadoop/yarn-env.sh in Hadoop 3.3.5 ?"
   },
@@ -1083,5 +1083,68 @@
     "title": "Debugging a Hadoop Java Code",
     "section": "",
     "text": "Assume that you have already installed these softwares:\n\nJava (on the Server)\nHadoop (on the Server installed in Standalone Operation)\nCgywin (Optional for the Clients)\n\nThe overall files in this example are shown here."
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#install-ubuntu-server",
+    "href": "posts/setup-hadoop-cluster/index.html#install-ubuntu-server",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "For example, I will use Ubuntu Server 20.04.6 in this setup. Install it in virtual box and don’t forget to install ssh I have set CPU 2 cors, Memory 4 GB, Space 25 GB By default, the network is set as NAT, so that the VM can use internet.\nInstall java version 8 for Hadoop.\nsudo apt update\nsudo apt install openjdk-8-jdk"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#install-virtual-machine",
+    "href": "posts/setup-hadoop-cluster/index.html#install-virtual-machine",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "For example, I will use Ubuntu Server 20.04.6 in this setup. Install it in Virtual Box and don’t forget to install ssh I have set CPU 2 cors, Memory 4 GB and Space 25 GB. By default, the network is set as NAT, so that the VM can use internet."
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#install-java-version-8-for-hadoop.",
+    "href": "posts/setup-hadoop-cluster/index.html#install-java-version-8-for-hadoop.",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "Install java version 8 for Hadoop. This is the required java version.\nsudo apt update\nsudo apt install openjdk-8-jdk\nThe next is to set the variables to ~/.bashrc. To add a literal string to the ~/.bashrc file in Ubuntu, you can use the echo command with single quotes to prevent variable expansion.\necho 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' &gt;&gt; ~/.bashrc\necho 'export PATH=$JAVA_HOME/bin:$PATH' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $JAVA_HOME\nUsing single quotes (') ensures that the string is treated as a literal and preserves the $PATH variable for future evaluation when the .bashrc file is sourced.\nLet’s visit released page and download hadoop-3.3.5.tar.gz or using the following command.\nwget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz\nExtract the file with the command:\ntar -zxvf hadoop-3.3.5.tar.gz\n# remove a tar file\nrm hadoop-3.3.5.tar.gz\necho 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' &gt;&gt; ~/.bashrc\necho 'export PATH=$JAVA_HOME/bin:$PATH' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $JAVA_HOME"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#install-java",
+    "href": "posts/setup-hadoop-cluster/index.html#install-java",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "Install java version 8 for Hadoop. This is the required java version.\nsudo apt update\nsudo apt install openjdk-8-jdk\nThe next is to set the variables to ~/.bashrc. To add a literal string to the ~/.bashrc file in Ubuntu, you can use the echo command with single quotes to prevent variable expansion.\necho 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' &gt;&gt; ~/.bashrc\necho 'export PATH=$JAVA_HOME/bin:$PATH' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $JAVA_HOME\nUsing single quotes (') ensures that the string is treated as a literal and preserves the $PATH variable for future evaluation when the .bashrc file is sourced."
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#download-hadoop",
+    "href": "posts/setup-hadoop-cluster/index.html#download-hadoop",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "Let’s visit released page and download hadoop-3.3.5.tar.gz or using the following command.\nwget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz\nExtract the file with the command:\ntar -zxvf hadoop-3.3.5.tar.gz\n# remove a tar file\nrm hadoop-3.3.5.tar.gz\nIn order to run the Hadoop command without specifying the directory, let add the variables. Assume that the directory of hadoop is /home/ubuntu/hadoop-3.3.5, you can use:\necho 'export HADOOP_HOME=/home/ubuntu/hadoop-3.3.5' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$HADOOP_HOME/bin' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$HADOOP_HOME/sbin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $HADOOP_HOME"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#clone-virtual-machine",
+    "href": "posts/setup-hadoop-cluster/index.html#clone-virtual-machine",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "Clone virtual machine and change the files /etc/hostname and /etc/hosts to replace the word of the original VM, then reboot the system.\n\n\n\nhostname\nassigned role\nIP address\n\n\n\n\nnode0\nnamenode\n192.168.1.127\n\n\nnode1\ndatanode\n192.168.1.128\n\n\nnode2\ndatanode\n192.168.1.129"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#assign-datanode-in-namenode",
+    "href": "posts/setup-hadoop-cluster/index.html#assign-datanode-in-namenode",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "In namenode, it might need declare hostname of workers (datanode).\nvi /etc/hosts\n192.168.1.128 node1\n192.168.1.129 node2\nSet workers IP address only in namenode.\nvi ~/hadoop-3.3.5/etc/hadoop/workers\n192.168.1.128\n192.168.1.129"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#start-the-cluster",
+    "href": "posts/setup-hadoop-cluster/index.html#start-the-cluster",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "start-dfs.sh\nstart-yarn.sh\n\n\n\nstop-dfs.sh\nstop-yarn.sh\n\n\n\njps"
+  },
+  {
+    "objectID": "posts/setup-hadoop-cluster/index.html#hadoop-web-ui",
+    "href": "posts/setup-hadoop-cluster/index.html#hadoop-web-ui",
+    "title": "Setup Hadoop Cluster",
+    "section": "",
+    "text": "Let’s go the browser HDFS http://localhost:9870/ and ResourceManager - http://localhost:8088/ of the Namenode, thus access with http://192.168.1.127:9870/ from outside a VM."
   }
 ]
