@@ -201,22 +201,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configure-hdfs-site.xml" id="toc-configure-hdfs-site.xml" class="nav-link" data-scroll-target="#configure-hdfs-site.xml"><span class="header-section-number">1.6</span> Configure <code>hdfs-site.xml</code></a></li>
   <li><a href="#configure-mapred-site.xml" id="toc-configure-mapred-site.xml" class="nav-link" data-scroll-target="#configure-mapred-site.xml"><span class="header-section-number">1.7</span> Configure <code>mapred-site.xml</code></a></li>
   <li><a href="#configure-yarn-site.xml" id="toc-configure-yarn-site.xml" class="nav-link" data-scroll-target="#configure-yarn-site.xml"><span class="header-section-number">1.8</span> Configure <code>yarn-site.xml</code></a></li>
-  <li><a href="#clone-virtual-machine" id="toc-clone-virtual-machine" class="nav-link" data-scroll-target="#clone-virtual-machine"><span class="header-section-number">1.9</span> Clone virtual machine</a></li>
-  <li><a href="#generate-rsa-key-pairs" id="toc-generate-rsa-key-pairs" class="nav-link" data-scroll-target="#generate-rsa-key-pairs"><span class="header-section-number">1.10</span> Generate rsa key pairs</a></li>
-  <li><a href="#assign-datanode-in-namenode" id="toc-assign-datanode-in-namenode" class="nav-link" data-scroll-target="#assign-datanode-in-namenode"><span class="header-section-number">1.11</span> Assign datanode in namenode</a></li>
-  <li><a href="#format-hdfs-namenode" id="toc-format-hdfs-namenode" class="nav-link" data-scroll-target="#format-hdfs-namenode"><span class="header-section-number">1.12</span> Format HDFS NameNode</a></li>
-  <li><a href="#start-the-cluster" id="toc-start-the-cluster" class="nav-link" data-scroll-target="#start-the-cluster"><span class="header-section-number">1.13</span> Start the cluster</a></li>
-  <li><a href="#hadoop-web-ui" id="toc-hadoop-web-ui" class="nav-link" data-scroll-target="#hadoop-web-ui"><span class="header-section-number">1.14</span> Hadoop Web UI</a></li>
-  <li><a href="#create-a-demo-file" id="toc-create-a-demo-file" class="nav-link" data-scroll-target="#create-a-demo-file"><span class="header-section-number">1.15</span> Create a demo file</a></li>
   </ul></li>
-  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous"><span class="header-section-number">2</span> Miscellaneous</a>
+  <li><a href="#duplicate-vm" id="toc-duplicate-vm" class="nav-link" data-scroll-target="#duplicate-vm"><span class="header-section-number">2</span> Duplicate VM</a>
   <ul class="collapse">
-  <li><a href="#permission-denied" id="toc-permission-denied" class="nav-link" data-scroll-target="#permission-denied"><span class="header-section-number">2.1</span> Permission denied</a></li>
-  <li><a href="#namenode-web-interface" id="toc-namenode-web-interface" class="nav-link" data-scroll-target="#namenode-web-interface"><span class="header-section-number">2.2</span> NameNode Web Interface</a></li>
-  <li><a href="#navigate-hadoop-files" id="toc-navigate-hadoop-files" class="nav-link" data-scroll-target="#navigate-hadoop-files"><span class="header-section-number">2.3</span> Navigate Hadoop Files</a></li>
-  <li><a href="#obtain-public-key-of-each" id="toc-obtain-public-key-of-each" class="nav-link" data-scroll-target="#obtain-public-key-of-each"><span class="header-section-number">2.4</span> Obtain public key of each</a></li>
-  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">2.5</span> Configuration files</a></li>
-  <li><a href="#configuring-environment-of-hadoop-daemons" id="toc-configuring-environment-of-hadoop-daemons" class="nav-link" data-scroll-target="#configuring-environment-of-hadoop-daemons"><span class="header-section-number">2.6</span> Configuring Environment of Hadoop Daemons</a></li>
+  <li><a href="#clone-virtual-machine" id="toc-clone-virtual-machine" class="nav-link" data-scroll-target="#clone-virtual-machine"><span class="header-section-number">2.1</span> Clone virtual machine</a></li>
+  <li><a href="#generate-rsa-key-pairs" id="toc-generate-rsa-key-pairs" class="nav-link" data-scroll-target="#generate-rsa-key-pairs"><span class="header-section-number">2.2</span> Generate rsa key pairs</a></li>
+  <li><a href="#assign-datanode-in-namenode" id="toc-assign-datanode-in-namenode" class="nav-link" data-scroll-target="#assign-datanode-in-namenode"><span class="header-section-number">2.3</span> Assign datanode in namenode</a></li>
+  <li><a href="#format-hdfs-namenode" id="toc-format-hdfs-namenode" class="nav-link" data-scroll-target="#format-hdfs-namenode"><span class="header-section-number">2.4</span> Format HDFS NameNode</a></li>
+  <li><a href="#start-the-cluster" id="toc-start-the-cluster" class="nav-link" data-scroll-target="#start-the-cluster"><span class="header-section-number">2.5</span> Start the cluster</a></li>
+  <li><a href="#hadoop-web-ui" id="toc-hadoop-web-ui" class="nav-link" data-scroll-target="#hadoop-web-ui"><span class="header-section-number">2.6</span> Hadoop Web UI</a></li>
+  <li><a href="#create-a-demo-file" id="toc-create-a-demo-file" class="nav-link" data-scroll-target="#create-a-demo-file"><span class="header-section-number">2.7</span> Create a demo file</a></li>
+  </ul></li>
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous"><span class="header-section-number">3</span> Miscellaneous</a>
+  <ul class="collapse">
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">3.1</span> Configuration files</a></li>
+  <li><a href="#permission-denied" id="toc-permission-denied" class="nav-link" data-scroll-target="#permission-denied"><span class="header-section-number">3.2</span> Permission denied</a></li>
+  <li><a href="#namenode-web-interface" id="toc-namenode-web-interface" class="nav-link" data-scroll-target="#namenode-web-interface"><span class="header-section-number">3.3</span> NameNode Web Interface</a></li>
+  <li><a href="#hadoop-daemons" id="toc-hadoop-daemons" class="nav-link" data-scroll-target="#hadoop-daemons"><span class="header-section-number">3.4</span> Hadoop Daemons</a></li>
+  <li><a href="#sec-get-different-IP" id="toc-sec-get-different-IP" class="nav-link" data-scroll-target="#sec-get-different-IP"><span class="header-section-number">3.5</span> How to get different IP on cloned machines ?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -352,8 +354,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">value</span>&gt;192.168.1.127&lt;/<span class="kw">value</span>&gt;</span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">property</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="clone-virtual-machine" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="clone-virtual-machine"><span class="header-section-number">1.9</span> Clone virtual machine</h2>
+</section>
+<section id="duplicate-vm" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Duplicate VM</h1>
+<section id="clone-virtual-machine" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="clone-virtual-machine"><span class="header-section-number">2.1</span> Clone virtual machine</h2>
 <p>Clone virtual machine and change the files <code>/etc/hostname</code> and <code>/etc/hosts</code> to replace the word of the original VM, then reboot the system.</p>
 <table class="table">
 <thead>
@@ -381,9 +386,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<p>If the clone VM have the same IP address as a original one, see <a href="#sec-get-different-IP">Section&nbsp;3.5</a>.</p>
 </section>
-<section id="generate-rsa-key-pairs" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="generate-rsa-key-pairs"><span class="header-section-number">1.10</span> Generate rsa key pairs</h2>
+<section id="generate-rsa-key-pairs" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="generate-rsa-key-pairs"><span class="header-section-number">2.2</span> Generate rsa key pairs</h2>
 <p>Generate ssh key pairs for each machine.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
@@ -398,8 +404,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-rsa</span> AAAAB...1tE= ubuntu@node1</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-rsa</span> AAAAB...AS0= ubuntu@node2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="assign-datanode-in-namenode" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="assign-datanode-in-namenode"><span class="header-section-number">1.11</span> Assign datanode in namenode</h2>
+<section id="assign-datanode-in-namenode" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="assign-datanode-in-namenode"><span class="header-section-number">2.3</span> Assign datanode in namenode</h2>
 <p>In namenode, it might need declare hostname of workers (datanode).</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> /etc/hosts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">192.168.1.128</span> node1</span>
@@ -450,14 +456,14 @@ Set all IP address of machine nodes
 pdsh -w ^hosts.txt hostname
 ``` -->
 </section>
-<section id="format-hdfs-namenode" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="format-hdfs-namenode"><span class="header-section-number">1.12</span> Format HDFS NameNode</h2>
+<section id="format-hdfs-namenode" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="format-hdfs-namenode"><span class="header-section-number">2.4</span> Format HDFS NameNode</h2>
 <p>In namenode, let’ s initializes the directory structure and file system metadata required by the NameNode to start a fresh HDFS instance.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/hadoop-3.3.5</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin/hdfs</span> namenode <span class="at">-format</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="start-the-cluster" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="start-the-cluster"><span class="header-section-number">1.13</span> Start the cluster</h2>
+<section id="start-the-cluster" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="start-the-cluster"><span class="header-section-number">2.5</span> Start the cluster</h2>
 <section id="start-processes" class="level3">
 <h3 class="anchored" data-anchor-id="start-processes">Start processes</h3>
 <div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">start-dfs.sh</span></span>
@@ -473,12 +479,12 @@ pdsh -w ^hosts.txt hostname
 <div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="hadoop-web-ui" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="hadoop-web-ui"><span class="header-section-number">1.14</span> Hadoop Web UI</h2>
+<section id="hadoop-web-ui" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="hadoop-web-ui"><span class="header-section-number">2.6</span> Hadoop Web UI</h2>
 <p>Let’s go the browser HDFS <code>http://localhost:9870/</code> and ResourceManager - <code>http://localhost:8088/</code> of the Namenode, thus access with <code>http://192.168.1.127:9870/</code> from outside a VM.</p>
 </section>
-<section id="create-a-demo-file" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="create-a-demo-file"><span class="header-section-number">1.15</span> Create a demo file</h2>
+<section id="create-a-demo-file" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="create-a-demo-file"><span class="header-section-number">2.7</span> Create a demo file</h2>
 <div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -489,93 +495,91 @@ pdsh -w ^hosts.txt hostname
 <div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hdfs</span> dfs <span class="at">-put</span> /home/ubuntu/demo /demo123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="miscellaneous" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Miscellaneous</h1>
-<p>When running the command</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbin/start-all.sh</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="permission-denied" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="permission-denied"><span class="header-section-number">2.1</span> Permission denied</h2>
+<section id="miscellaneous" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Miscellaneous</h1>
+<section id="configuration-files" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="configuration-files"><span class="header-section-number">3.1</span> Configuration files</h2>
+<p>By default, Hadoop configurations lie on the following files. In order to set other properties, please check in these files.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/share/doc/hadoop/hadoop-project-dist/hadoop-common/core-default.xml</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/share/doc/hadoop/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/share/doc/hadoop/hadoop-yarn/hadoop-yarn-common/yarn-default.xml</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/share/doc/hadoop/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, set into these site-specific configuration for replacement.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/core-site.xml</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/hdfs-site.xml</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/yarn-site.xml</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/mapred-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="permission-denied" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="permission-denied"><span class="header-section-number">3.2</span> Permission denied</h2>
 <p>I got the message as follows:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> namenodes on <span class="pp">[</span><span class="ss">master</span><span class="pp">]</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> master: rcmd: socket: Permission denied</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> datanodes</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.23: rcmd: socket: Permission denied</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.21: rcmd: socket: Permission denied</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.20: rcmd: socket: Permission denied</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> namenodes on <span class="pp">[</span><span class="ss">master</span><span class="pp">]</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> master: rcmd: socket: Permission denied</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopping</span> datanodes</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.23: rcmd: socket: Permission denied</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.21: rcmd: socket: Permission denied</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh@node0:</span> 192.168.1.20: rcmd: socket: Permission denied</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Please check in <code>workers</code>. The IP address was not set correctly.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/hadoop-3.3.5/etc/hadoop/workers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="namenode-web-interface" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="namenode-web-interface"><span class="header-section-number">2.2</span> NameNode Web Interface</h2>
-<p>The web interface for the NameNode is available at <code>http://localhost:9870/</code> by default. If the <code>ufw</code> is enable, you should allow add <code>ufw</code> rule on port <code>9870</code></p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 9870</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="namenode-web-interface" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="namenode-web-interface"><span class="header-section-number">3.3</span> NameNode Web Interface</h2>
+<p>The web interface for the NameNode is available at <code>http://192.168.1.127:9870/</code> by default. Normally, the <code>ufw</code> is inactive after install Ubuntu image. you do not have to do here. If the <code>ufw</code> is enable for some cases, you should allow add <code>ufw</code> rule on port <code>9870</code></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow 9870</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="navigate-hadoop-files" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="navigate-hadoop-files"><span class="header-section-number">2.3</span> Navigate Hadoop Files</h2>
-<p>I am currently working on Window system. Extraction with Winrar causes me some errors, thus I use Cygwin Linux Software to extract the file.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cygwin =&gt; node0</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5.tar.gz ubuntu@192.168.1.109:~/</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.109</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> /cygdrive/c/users/Jorgnur/Desktop/hadoop/ver/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.109:~/hadoop-3.3.5/etc/</span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@node0</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="co"># node0 =&gt; node1</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.110:~/</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.110</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.110:~/hadoop-3.3.5/etc/</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="co"># node0 =&gt; node2</span></span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5.tar.gz ubuntu@192.168.1.107:~/</span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> ubuntu@192.168.1.107</span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> hadoop-3.3.5.tar.gz</span>
-<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
-<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avzphi</span> ~/hadoop-3.3.5/etc/hadoop ubuntu@192.168.1.107:~/hadoop-3.3.5/etc/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="hadoop-daemons" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="hadoop-daemons"><span class="header-section-number">3.4</span> Hadoop Daemons</h2>
+<p>Hadoop Daemons can be checked via the command:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>HDFS daemons will be listed when the command <code>start-dfs.sh</code> is used.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>NameNode</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>SecondaryNameNode</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>DataNode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>YARN daemons will be listed when the command <code>start-yarn.sh</code> is used.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>ResourceManager</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>NodeManager</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>WebAppProxy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="obtain-public-key-of-each" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="obtain-public-key-of-each"><span class="header-section-number">2.4</span> Obtain public key of each</h2>
-<p>Using <code>pdsh</code> and regular expression to retreive the rsa public key of each machine</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdsh</span> <span class="at">-w</span> node<span class="pp">[</span><span class="ss">1</span><span class="pp">-</span><span class="ss">2</span><span class="pp">]</span> cat ~/.ssh/id_rsa.pub <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/[^:]*: //'</span> <span class="op">&gt;&gt;</span> text.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="configuration-files" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="configuration-files"><span class="header-section-number">2.5</span> Configuration files</h2>
-<p>Hadoop’s Java configuration is driven by two types of important configuration files</p>
-<p>Read-only default configuration</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-project-dist\hadoop-common\core-default.xml</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-project-dist\hadoop-hdfs\hdfs-default.xml</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-yarn\hadoop-yarn-common\yarn-default.xml</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5\share\doc\hadoop\hadoop-mapreduce-client\hadoop-mapreduce-client-core\mapred-default.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Site-specific configuration</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/core-site.xml</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/hdfs-site.xml</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/yarn-site.xml</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>hadoop-3.3.5/etc/hadoop/mapred-site.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>HDFS daemons are</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>NameNode</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>SecondaryNameNode</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>DataNode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>YARN daemons are</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>ResourceManager</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>NodeManager</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>WebAppProxy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="configuring-environment-of-hadoop-daemons" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="configuring-environment-of-hadoop-daemons"><span class="header-section-number">2.6</span> Configuring Environment of Hadoop Daemons</h2>
-<p>Administrators should use the</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/hadoop-env.sh</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/mapred-env.sh</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="ex">etc/hadoop/yarn-env.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>to do site-specific customization of the Hadoop daemons’ process environment.</p>
-<p>Do I need the specify the JAVA_HOME to all these <code>etc/hadoop/hadoop-env.sh etc/hadoop/mapred-env.sh etc/hadoop/yarn-env.sh</code> in Hadoop 3.3.5 ?</p>
+<section id="sec-get-different-IP" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-get-different-IP"><span class="header-section-number">3.5</span> How to get different IP on cloned machines ?</h2>
+<p>Firstly, check what the ip address on a VM.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I figure out how to use <code>NetworkManager</code> to handle IP address in <code>User-host Adapter</code> Network Settings. You can check the status of the NetworkManager service by running the following command:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status NetworkManager</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If it is not available, install with commands</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install network-manager</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check it again</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status NetworkManager</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># or start it manually</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start NetworkManager</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, change yaml in <code>/etc/netplan</code></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /etc/netplan</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Open the yaml file, e.g., <code>cat 00-installer-config.yaml</code></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the network config written by 'subiquity'</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">network</span><span class="kw">:</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ethernets</span><span class="kw">:</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enp0s3</span><span class="kw">:</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dhcp4</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and chang it into</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let NetworkManager manage all devices on this system</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">network</span><span class="kw">:</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">renderer</span><span class="kw">:</span><span class="at"> NetworkManager</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> netplan try</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> netplan apply</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check the IP</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ## Obtain public key of each
+
+Using `pdsh` and regular expression to retreive the rsa public key of each machine
+
+```bash
+pdsh -w node[1-2] cat ~/.ssh/id_rsa.pub | sed 's/[^:]*: //' >> text.txt
+``` -->
 
 
 </section>
