@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to Runroj Yadbantung’s memos",
     "section": "",
-    "text": "Debugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+    "text": "Using Apache Spark\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 28, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nDebugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/neo4j-in-nextjs/index.html",
@@ -1167,5 +1167,61 @@
     "title": "Setup Hadoop Cluster",
     "section": "3.5 How to get different IP on cloned machines ?",
     "text": "3.5 How to get different IP on cloned machines ?\nFirstly, check what the ip address on a VM.\nip a\nI figure out how to use NetworkManager to handle IP address in User-host Adapter Network Settings. You can check the status of the NetworkManager service by running the following command:\nsystemctl status NetworkManager\nIf it is not available, install with commands\nsudo apt update\nsudo apt install network-manager\n# check it again\nsystemctl status NetworkManager\n# or start it manually\nsudo systemctl start NetworkManager\nThen, change yaml in /etc/netplan\ncd /etc/netplan\nls\nOpen the yaml file, e.g., cat 00-installer-config.yaml\n# This is the network config written by 'subiquity'\nnetwork:\n  ethernets:\n    enp0s3:\n      dhcp4: true\n  version: 2\nand chang it into\n# Let NetworkManager manage all devices on this system\nnetwork:\n  version: 2\n  renderer: NetworkManager\nsudo netplan try\nsudo netplan apply\n# check the IP\nip a"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html",
+    "href": "posts/using-apache-spark/index.html",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "Apache Spark can be download here Download Apache Spark\n\n\n\ntar -zxvf spark-3.4.1-bin-hadoop3.tgz\nmv spark-3.4.1-bin-hadoop3 spark\nrm spark-3.4.1-bin-hadoop3.tgz\n\n\n\necho 'export SPARK_HOME=/home/ubuntu/spark' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$SPARK_HOME/bin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $SPARK_HOME\n\n\n\necho 'export SPARK_HOME=/home/ubuntu/spark' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$SPARK_HOME/bin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $SPARK_HOME\n\n\n\ncp $SPARK_HOME/conf/spark-env.sh.template $SPARK_HOME/conf/spark-env.sh\nvi $SPARK_HOME/conf/spark-env.sh\n\ncp $SPARK_HOME/conf/spark-defaults.conf.template $SPARK_HOME/conf/spark-defaults.conf\nvi $SPARK_HOME/conf/spark-defaults.conf\n\n\n\nspark-shell\n\n\n\nrun-example SparkPi 10"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#download-apache-spark",
+    "href": "posts/using-apache-spark/index.html#download-apache-spark",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "Apache Spark can be download here Download Apache Spark"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#download-apache-spark-1",
+    "href": "posts/using-apache-spark/index.html#download-apache-spark-1",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "tar -zxvf spark-3.4.1-bin-hadoop3.tgz\nmv spark-3.4.1-bin-hadoop3 spark\nrm spark-3.4.1-bin-hadoop3.tgz"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#set-environment-variables",
+    "href": "posts/using-apache-spark/index.html#set-environment-variables",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "echo 'export SPARK_HOME=/home/ubuntu/spark' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$SPARK_HOME/bin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $SPARK_HOME"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#set-environment-variables-1",
+    "href": "posts/using-apache-spark/index.html#set-environment-variables-1",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "echo 'export SPARK_HOME=/home/ubuntu/spark' &gt;&gt; ~/.bashrc\necho 'export PATH=$PATH:$SPARK_HOME/bin' &gt;&gt; ~/.bashrc\n# reload\nsource ~/.bashrc\n# check\necho $SPARK_HOME"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#update-configuration",
+    "href": "posts/using-apache-spark/index.html#update-configuration",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "cp $SPARK_HOME/conf/spark-env.sh.template $SPARK_HOME/conf/spark-env.sh\nvi $SPARK_HOME/conf/spark-env.sh\n\ncp $SPARK_HOME/conf/spark-defaults.conf.template $SPARK_HOME/conf/spark-defaults.conf\nvi $SPARK_HOME/conf/spark-defaults.conf"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#using-spark-shell",
+    "href": "posts/using-apache-spark/index.html#using-spark-shell",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "spark-shell"
+  },
+  {
+    "objectID": "posts/using-apache-spark/index.html#run-spark-examples",
+    "href": "posts/using-apache-spark/index.html#run-spark-examples",
+    "title": "Using Apache Spark",
+    "section": "",
+    "text": "run-example SparkPi 10"
   }
 ]
