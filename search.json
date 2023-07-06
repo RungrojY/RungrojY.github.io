@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to Runroj Yadbantung’s memos",
     "section": "",
-    "text": "Using Apache Spark\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 28, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nDebugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
+    "text": "WordCount using Kafka Streams\n\n\n\n\n\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJul 6, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Apache Spark\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 28, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nDebugging a Hadoop Java Code\n\n\n\n\n\n\n\nbash\n\n\njava\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Hadoop\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nSetup Hadoop Cluster\n\n\n\n\n\n\n\nbash\n\n\nxml\n\n\n\n\n\n\n\n\n\n\n\nJun 17, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Redux in Next.js\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCreate an API of Neo4j Database in Next.js\n\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Cypher in Python\n\n\n\n\n\n\n\ncypher\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nCypher Query\n\n\n\n\n\n\n\ncypher\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nMy TypeScript Journey\n\n\n\n\n\n\n\ntypescript\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing Multipass\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\n  \n\n\n\n\nUsing rsync in Linux\n\n\n\n\n\n\n\nbash\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2023\n\n\nRungroj Yadbantung\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/neo4j-in-nextjs/index.html",
@@ -1223,5 +1223,96 @@
     "title": "Using Apache Spark",
     "section": "",
     "text": "run-example SparkPi 10"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html",
+    "href": "posts/kafka-stream-wordcount/index.html",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "This code sets up a Kafka Streams application that reads sentences from the “sentences” topic, performs a word count analysis, and writes the result to the “word-count” topic using the Kafka Streams DSL. The configuration properties define the necessary Kafka and Kafka Streams settings for the application to connect to Kafka brokers and process the data.\nimport org.apache.kafka.clients.consumer.ConsumerConfig;\nimport org.apache.kafka.common.serialization.Serdes;\nimport org.apache.kafka.streams.KafkaStreams;\nimport org.apache.kafka.streams.StreamsConfig;\nimport org.apache.kafka.streams.StreamsBuilder;\nimport org.apache.kafka.streams.kstream.Produced;\nimport org.apache.kafka.streams.kstream.Materialized;\n\nimport java.util.Arrays;\nimport java.util.Properties;\n\npublic class WordCountApp {\n\n    private static Properties getConfig() {\n        Properties properties = new Properties();\n        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, \"word-count-app\");\n        properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:9092\");\n        properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, \"earliest\");\n        properties.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, \"0\");\n        return properties;\n    }\n\n    public static void main(String[] args) {\n        Properties props = getConfig();\n\n        StreamsBuilder streamsBuilder = new StreamsBuilder();\n        \n        streamsBuilder.&lt;String, String&gt;stream(\"sentences\")\n                .flatMapValues((key, value) -&gt;\n                        Arrays.asList(value.toLowerCase()\n                            .split(\" \")))\n                .groupBy((key, value) -&gt; value)\n                .count(Materialized.with(Serdes.String(), Serdes.Long()))\n                .toStream()\n                .to(\"word-count\", Produced.with(Serdes.String(), Serdes.Long()));\n        \n        KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), props);\n\n        kafkaStreams.start();\n\n        Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));\n    }\n}\nThe provided code is a simple Apache Kafka Streams application written in Java for performing a word count analysis on input sentences. Let’s break down the code and explain its functionality:\n\n\nThe necessary import statements are included to import required classes and interfaces from the Apache Kafka Streams library and other Kafka-related dependencies.\nimport org.apache.kafka.clients.consumer.ConsumerConfig;\nimport org.apache.kafka.common.serialization.Serdes;\nimport org.apache.kafka.streams.KafkaStreams;\nimport org.apache.kafka.streams.StreamsConfig;\nimport org.apache.kafka.streams.StreamsBuilder;\nimport org.apache.kafka.streams.kstream.Produced;\nimport org.apache.kafka.streams.kstream.Materialized;\n\nimport java.util.Arrays;\nimport java.util.Properties;\n\n...\n\n\n\nThis class contains the main method, which serves as the entry point for the application.\nimport ...\n\npublic class WordCountApp {\n    ...\n}\n\n\n\nThis method is responsible for configuring and returning a Properties object that holds various Kafka Streams configuration settings. These settings include the application ID, bootstrap servers, default key and value serde classes, consumer auto-offset reset, and caching configuration. The broker server localhost:9092 can be setup as in quick start.\npublic class WordCountApp {\n    private static Properties getConfig() {\n        Properties properties = new Properties();\n        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, \"word-count-app\");\n        properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:9092\");\n        properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, \"earliest\");\n        properties.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, \"0\");\n        return properties;\n    }\n    ...\n}\n\n\n\nThe main method is where the application logic is implemented.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n    }\n}\n\n\n\nThe getConfig() method is called to obtain the Kafka Streams configuration properties.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        Properties props = getConfig();\n        ...\n    }\n}\n\n\n\nAn instance of StreamsBuilder is created, which serves as the high-level Kafka Streams DSL for building the processing topology.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        StreamsBuilder streamsBuilder = new StreamsBuilder();\n        ...\n    }\n}\n\n\n\nThe processing topology is defined using the methods and operations provided by the Kafka Streams DSL. In this case, the following operations are chained together: - stream(): Reads input records from the “sentences” Kafka topic. - flatMapValues(): Tokenizes each sentence into individual words and converts them to lowercase. - groupBy(): Groups the words by their value. - count(): Performs a count aggregation on the grouped words. - toStream(): Converts the result into a KStream of key-value pairs. - to(): Writes the result to the “word-count” Kafka topic.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        streamsBuilder.&lt;String, String&gt;stream(\"sentences\")\n                .flatMapValues((key, value) -&gt;\n                        Arrays.asList(value.toLowerCase()\n                            .split(\" \")))\n                .groupBy((key, value) -&gt; value)\n                .count(Materialized.with(Serdes.String(), Serdes.Long()))\n                .toStream()\n                .to(\"word-count\", Produced.with(Serdes.String(), Serdes.Long()));\n        ...                \n    }\n}\n\n\n\nAn instance of KafkaStreams is created, which represents the Kafka Streams client that runs the processing topology.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), props);\n        ...\n    }\n}\n\n\n\nThe Kafka Streams client is started, and the processing of input records begins.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        kafkaStreams.start();\n        ...\n    }\n}\n\n\n\nA shutdown hook is registered to gracefully close the Kafka Streams client when the application is terminated.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));\n    }\n}\n\n\n\nThe results should work as followed: \n\n\n\npic.2 Kafka Consumer Console"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#java-code",
+    "href": "posts/kafka-stream-wordcount/index.html#java-code",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "Overall, this code sets up a Kafka Streams application that reads sentences from the “sentences” topic, performs a word count analysis, and writes the result to the “word-count” topic using the Kafka Streams DSL. The configuration properties define the necessary Kafka and Kafka Streams settings for the application to connect to Kafka brokers and process the data.\nimport org.apache.kafka.clients.consumer.ConsumerConfig;\nimport org.apache.kafka.common.serialization.Serdes;\nimport org.apache.kafka.streams.KafkaStreams;\nimport org.apache.kafka.streams.StreamsConfig;\nimport org.apache.kafka.streams.StreamsBuilder;\nimport org.apache.kafka.streams.kstream.Produced;\nimport org.apache.kafka.streams.kstream.Materialized;\n\nimport java.util.Arrays;\nimport java.util.Properties;\n\npublic class WordCountApp {\n\n    private static Properties getConfig() {\n        Properties properties = new Properties();\n        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, \"word-count-app\");\n        properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:29092\");\n        properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, \"earliest\");\n        properties.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, \"0\");\n        return properties;\n    }\n\n    public static void main(String[] args) {\n        Properties props = getConfig();\n\n        StreamsBuilder streamsBuilder = new StreamsBuilder();\n        \n        streamsBuilder.&lt;String, String&gt;stream(\"sentences\")\n                .flatMapValues((key, value) -&gt;\n                        Arrays.asList(value.toLowerCase()\n                            .split(\" \")))\n                .groupBy((key, value) -&gt; value)\n                .count(Materialized.with(Serdes.String(), Serdes.Long()))\n                .toStream()\n                .to(\"word-count\", Produced.with(Serdes.String(), Serdes.Long()));\n        \n        KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), props);\n\n        kafkaStreams.start();\n\n        Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));\n    }\n}\nThe provided code is a simple Apache Kafka Streams application written in Java for performing a word count analysis on input sentences. Let’s go through the code and explain its functionality:"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#import-statements",
+    "href": "posts/kafka-stream-wordcount/index.html#import-statements",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The necessary import statements are included to import required classes and interfaces from the Apache Kafka Streams library and other Kafka-related dependencies.\nimport org.apache.kafka.clients.consumer.ConsumerConfig;\nimport org.apache.kafka.common.serialization.Serdes;\nimport org.apache.kafka.streams.KafkaStreams;\nimport org.apache.kafka.streams.StreamsConfig;\nimport org.apache.kafka.streams.StreamsBuilder;\nimport org.apache.kafka.streams.kstream.Produced;\nimport org.apache.kafka.streams.kstream.Materialized;\n\nimport java.util.Arrays;\nimport java.util.Properties;\n\n..."
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#wordcountapp-class",
+    "href": "posts/kafka-stream-wordcount/index.html#wordcountapp-class",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "This class contains the main method, which serves as the entry point for the application.\nimport ...\n\npublic class WordCountApp {\n    ...\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#getconfig-method",
+    "href": "posts/kafka-stream-wordcount/index.html#getconfig-method",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "This method is responsible for configuring and returning a Properties object that holds various Kafka Streams configuration settings. These settings include the application ID, bootstrap servers, default key and value serde classes, consumer auto-offset reset, and caching configuration. The broker server localhost:9092 can be setup as in quick start.\npublic class WordCountApp {\n    private static Properties getConfig() {\n        Properties properties = new Properties();\n        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, \"word-count-app\");\n        properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:9092\");\n        properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, \"earliest\");\n        properties.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, \"0\");\n        return properties;\n    }\n    ...\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#main-method",
+    "href": "posts/kafka-stream-wordcount/index.html#main-method",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The main method is where the application logic is implemented.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#properties-initialization",
+    "href": "posts/kafka-stream-wordcount/index.html#properties-initialization",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The getConfig() method is called to obtain the Kafka Streams configuration properties.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        Properties props = getConfig();\n        ...\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#streamsbuilder",
+    "href": "posts/kafka-stream-wordcount/index.html#streamsbuilder",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "An instance of StreamsBuilder is created, which serves as the high-level Kafka Streams DSL for building the processing topology.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        StreamsBuilder streamsBuilder = new StreamsBuilder();\n        ...\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#stream-processing-topology",
+    "href": "posts/kafka-stream-wordcount/index.html#stream-processing-topology",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The processing topology is defined using the methods and operations provided by the Kafka Streams DSL. In this case, the following operations are chained together: - stream(): Reads input records from the “sentences” Kafka topic. - flatMapValues(): Tokenizes each sentence into individual words and converts them to lowercase. - groupBy(): Groups the words by their value. - count(): Performs a count aggregation on the grouped words. - toStream(): Converts the result into a KStream of key-value pairs. - to(): Writes the result to the “word-count” Kafka topic.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        streamsBuilder.&lt;String, String&gt;stream(\"sentences\")\n                .flatMapValues((key, value) -&gt;\n                        Arrays.asList(value.toLowerCase()\n                            .split(\" \")))\n                .groupBy((key, value) -&gt; value)\n                .count(Materialized.with(Serdes.String(), Serdes.Long()))\n                .toStream()\n                .to(\"word-count\", Produced.with(Serdes.String(), Serdes.Long()));\n        ...                \n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#kafkastreams",
+    "href": "posts/kafka-stream-wordcount/index.html#kafkastreams",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "An instance of KafkaStreams is created, which represents the Kafka Streams client that runs the processing topology.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), props);\n        ...\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#kafkastreams.start",
+    "href": "posts/kafka-stream-wordcount/index.html#kafkastreams.start",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The Kafka Streams client is started, and the processing of input records begins.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        kafkaStreams.start();\n        ...\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#shutdown-hook",
+    "href": "posts/kafka-stream-wordcount/index.html#shutdown-hook",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "A shutdown hook is registered to gracefully close the Kafka Streams client when the application is terminated.\nimport ...\n\npublic class WordCountApp {\n    ...\n    public static void main(String[] args) {\n        ...\n        Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));\n    }\n}"
+  },
+  {
+    "objectID": "posts/kafka-stream-wordcount/index.html#results",
+    "href": "posts/kafka-stream-wordcount/index.html#results",
+    "title": "WordCount using Kafka Streams",
+    "section": "",
+    "text": "The results should work as followed: \n\n\n\npic.2 Kafka Consumer Console"
   }
 ]

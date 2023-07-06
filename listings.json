@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/kafka-stream-wordcount/index.html",
       "/posts/using-apache-spark/index.html",
       "/posts/hadoop-java-debugging/index.html",
       "/posts/using-hadoop/index.html",
