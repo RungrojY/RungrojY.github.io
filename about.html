@@ -58,6 +58,18 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+  function handleKeyDown(event) {
+    // Check if the event key is 'K' and the Ctrl key is pressed
+    if (event.key === '/') {
+      // Open the search box
+      const quartoSearch = document.querySelector('#quarto-search');
+      const button = quartoSearch.querySelector('.aa-DetachedSearchButton');
+      button.click();
+    }
+  }
+  document.addEventListener('keydown', handleKeyDown);
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -83,16 +95,6 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
  <span class="menu-text">About Me</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
-</i> 
- <span class="menu-text"></span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
@@ -123,17 +125,13 @@ ul.task-list li input[type="checkbox"] {
 </main> 
   <hr class="about-sep">
    <div class="about-links">
-  <a href="https://twitter.com/RungrojYad" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://www.linkedin.com/in/rungroj-yadbantung-8b0536278/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
   <a href="https://github.com/RungrojY" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
+  </a>
+  <a href="https://github.com/RungrojY" class="about-link" rel="" target="">
+    <i class="bi bi-facebook"></i>
+     <span class="about-link-text">Facebook</span>
   </a>
 </div>
 </div>
